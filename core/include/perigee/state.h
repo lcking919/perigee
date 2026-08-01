@@ -33,5 +33,6 @@ typedef struct {
 
 bool prg_flight_init(prg_flight_t *f, const char *log_path);
 bool prg_flight_update(prg_flight_t *f, const prg_sample_t *s);
+bool prg_flight_init_auto(prg_flight_t *f);
 
 #endif

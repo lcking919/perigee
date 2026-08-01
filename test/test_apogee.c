@@ -431,6 +431,48 @@ static void test_log_next_path_skips_existing(void)
     unlink("flight_002.bin");
 }
 
+static void test_flight_init_auto_does_not_overwrite(void)
+{
+    printf("test: prg_flight_init_auto avoids overwriting a previous flight\n");
+
+    /* clean slate */
+    unlink("flight_001.bin");
+    unlink("flight_002.bin");
+
+    prg_flight_t f1;
+    CHECK(prg_flight_init_auto(&f1), "first flight initialized");
+
+    prg_sample_t s;
+    s.t_ms = 0; s.alt_m = 0.0f; s.accel_g = 1.0f;
+    s.baro_valid = true; s.imu_valid = true;
+    prg_flight_update(&f1, &s);
+    prg_log_close(f1.log_file);
+
+    FILE *check1 = fopen("flight_001.bin", "rb");
+    CHECK(check1 != NULL, "first flight created flight_001.bin");
+    if (check1) fclose(check1);
+
+    prg_flight_t f2;
+    CHECK(prg_flight_init_auto(&f2), "second flight initialized");
+
+    prg_flight_update(&f2, &s);
+    prg_log_close(f2.log_file);
+
+    FILE *check2 = fopen("flight_002.bin", "rb");
+    CHECK(check2 != NULL, "second flight created flight_002.bin, not overwriting flight_001");
+    if (check2) fclose(check2);
+
+    /* prove flight_001.bin still has real content, not erased by the second flight */
+    FILE *verify1 = fopen("flight_001.bin", "rb");
+    prg_log_record_t rec;
+    bool got_one = prg_log_read(verify1, &rec);
+    fclose(verify1);
+    CHECK(got_one, "flight_001.bin still contains its original record, untouched");
+
+    unlink("flight_001.bin");
+    unlink("flight_002.bin");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -447,6 +489,7 @@ int main(void)
     test_burnout_with_noise();
     test_log_write_and_read_back();
     test_log_next_path_skips_existing();
+    test_flight_init_auto_does_not_overwrite();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 

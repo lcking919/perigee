@@ -11,6 +11,17 @@ bool prg_flight_init(prg_flight_t *f, const char *log_path)
     return prg_log_open(&f->log_file, log_path);
 }
 
+bool prg_flight_init_auto(prg_flight_t *f)
+{
+    char path[64];
+
+    if (!prg_log_next_path(path, sizeof(path))) {
+        return false;
+    }
+
+    return prg_flight_init(f, path);
+}
+
 bool prg_flight_update(prg_flight_t *f, const prg_sample_t *s)
 {
     prg_log_record_t rec;
