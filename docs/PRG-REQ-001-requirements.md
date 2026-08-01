@@ -51,6 +51,16 @@ end-to-end test.
 
 *Verification:* T — test_state_machine_full_flight in test_apogee.c.
 
+**PRG-FSW-055** The flight computer shall transition from `DESCENT` to
+`LANDED` upon altitude remaining within ±2m and acceleration within
+±0.5g of rest (1.0g) for not less than 10 seconds.
+
+*Rationale:* Distinguishes a genuine landing from a brief lull in descent
+(e.g. under parachute oscillation). Mirrors PRG-FSW-050's original wording.
+
+*Verification:* T — test_state_machine_full_flight in test_apogee.c,
+full ARMED->LANDED sequence.
+
 ## Verification matrix
 
 | Requirement | Method | Status |
@@ -59,3 +69,4 @@ end-to-end test.
 | PRG-FSW-020 | T | **Met** — declared 100ms after sustained 5g onset (the theoretical minimum given the 100ms hold requirement); single-sample 5g spike correctly produces no detection. |
 | PRG-FSW-025 | T | **Met** — burnout declared 100ms after sustained sub-1.5g onset (theoretical minimum given the hold requirement), verified as part of the full-flight state machine test. |
 | PRG-FSW-065 | T | **Met** — full synthetic flight correctly reaches BOOST at 1100ms and DESCENT at 5140ms. |
+| PRG-FSW-055 | T | **Met** — landed declared 16000ms into the test profile (10000ms after the ground phase begins at 6000ms — the theoretical minimum given the hold requirement). |

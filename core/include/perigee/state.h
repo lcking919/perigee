@@ -5,6 +5,8 @@
 #include "perigee/vapogee.h"
 #include "perigee/boost.h"
 #include "perigee/burnout.h"
+#include "perigee/landing.h"
+
 
 
 typedef enum {
@@ -21,6 +23,7 @@ typedef struct {
     prg_boost_t        boost;
     prg_burnout_t      burnout;
     prg_vapogee_t      apogee;
+    prg_landing_t      landing;
 } prg_flight_t;
 
 void prg_flight_init(prg_flight_t *f);

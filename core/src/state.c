@@ -34,6 +34,9 @@ bool prg_flight_update(prg_flight_t *f, const prg_sample_t *s)
         break;
 
     case PRG_STATE_DESCENT:
+        if (prg_landing_update(&f->landing, s)) {
+            f->state = PRG_STATE_LANDED;
+        }
         break;
 
     case PRG_STATE_LANDED:
