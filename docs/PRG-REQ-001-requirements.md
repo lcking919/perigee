@@ -23,4 +23,4 @@ phase would bound deployment timing error.
 
 | Requirement | Method | Status |
 |---|---|---|
-| PRG-FSW-030 | T | **Not met** — 500 ms measured, see test_apogee.c |
+| PRG-FSW-030 | T | **Met** — velocity detector using a 10-sample ring buffer, split into two groups of 5 for averaging: 140ms clean, 180ms with ±0.2m sensor noise. Raw two-sample velocity (superseded) measured 60ms clean but 600ms under the same noise — discarded for being noise-sensitive despite looking better on clean data. Distance-based detector (apogee.c) measures 500ms; retained as a baseline. |

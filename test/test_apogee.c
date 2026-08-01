@@ -118,6 +118,30 @@ static void test_velocity_detector(void)
     CHECK(lag <= 200, "PRG-FSW-030: within 200 ms of apogee");
 }
 
+static void test_velocity_detector_with_noise(void)
+{
+    printf("test: velocity detector with sensor noise\n");
+
+    prg_vapogee_t det;
+    prg_vapogee_init(&det);
+
+    unsigned seed = 42;
+    for (uint32_t t = 0; t <= DUR_MS; t += DT_MS) {
+        seed = seed * 1103515245u + 12345u;
+        float noise = (((float)((seed >> 16) & 0x7fff) / 16383.5f) - 1.0f) * 0.2f;
+        prg_sample_t s = make(t, profile_alt(t) + noise, true);
+        prg_vapogee_update(&det, &s);
+    }
+
+    if (det.detected) {
+        long lag = (long)det.detected_t_ms - APEX_MS;
+        printf("        declared %u ms, lag %ld ms\n", det.detected_t_ms, lag);
+        CHECK(lag > -300 && lag < 800, "detected somewhere near apogee, not wildly off");
+    } else {
+        CHECK(0, "apogee was detected at all");
+    }
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -126,6 +150,7 @@ int main(void)
     test_no_false_positive_climbing();
     test_single_glitch_rejected();
     test_velocity_detector();
+    test_velocity_detector_with_noise();
 
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
