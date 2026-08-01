@@ -1,11 +1,14 @@
 #ifndef PERIGEE_STATE_H
 #define PERIGEE_STATE_H
 
+#include <stdio.h>
 #include "perigee/sample.h"
 #include "perigee/vapogee.h"
 #include "perigee/boost.h"
 #include "perigee/burnout.h"
 #include "perigee/landing.h"
+#include "perigee/log.h"
+
 
 
 
@@ -24,9 +27,11 @@ typedef struct {
     prg_burnout_t      burnout;
     prg_vapogee_t      apogee;
     prg_landing_t      landing;
+    FILE               *log_file;
+
 } prg_flight_t;
 
-void prg_flight_init(prg_flight_t *f);
+bool prg_flight_init(prg_flight_t *f, const char *log_path);
 bool prg_flight_update(prg_flight_t *f, const prg_sample_t *s);
 
 #endif

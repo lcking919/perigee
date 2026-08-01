@@ -204,7 +204,7 @@ static void test_state_machine_full_flight(void)
     printf("test: state machine walks a full flight\n");
 
     prg_flight_t f;
-    prg_flight_init(&f);
+    CHECK(prg_flight_init(&f, "/tmp/perigee_flight_test.bin"), "flight log opened");
     f.state = PRG_STATE_ARMED;
 
     prg_flight_state_t seen_boost   = PRG_STATE_IDLE;
