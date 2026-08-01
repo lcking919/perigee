@@ -4,6 +4,8 @@
 #include "perigee/sample.h"
 #include "perigee/vapogee.h"
 #include "perigee/boost.h"
+#include "perigee/burnout.h"
+
 
 typedef enum {
     PRG_STATE_IDLE = 0,
@@ -17,6 +19,7 @@ typedef enum {
 typedef struct {
     prg_flight_state_t state;
     prg_boost_t        boost;
+    prg_burnout_t      burnout;
     prg_vapogee_t      apogee;
 } prg_flight_t;
 

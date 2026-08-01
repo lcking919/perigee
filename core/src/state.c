@@ -4,6 +4,7 @@ void prg_flight_init(prg_flight_t *f)
 {
     f->state = PRG_STATE_IDLE;
     prg_boost_init(&f->boost);
+    prg_burnout_init(&f->burnout);
     prg_vapogee_init(&f->apogee);
 }
 
@@ -21,6 +22,9 @@ bool prg_flight_update(prg_flight_t *f, const prg_sample_t *s)
         break;
 
     case PRG_STATE_BOOST:
+        if (prg_burnout_update(&f->burnout, s)) {
+            f->state = PRG_STATE_COAST;
+        }
         break;
 
     case PRG_STATE_COAST:

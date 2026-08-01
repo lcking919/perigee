@@ -1,6 +1,7 @@
 #include "perigee/apogee.h"
 #include "perigee/vapogee.h"
 #include "perigee/boost.h"
+#include "perigee/state.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -197,6 +198,62 @@ static void test_boost_ignores_a_single_jolt(void)
     CHECK(!det.detected, "single jolt did not trigger boost");
 }
 
+static void test_state_machine_full_flight(void)
+{
+    printf("test: state machine walks a full flight\n");
+
+    prg_flight_t f;
+    prg_flight_init(&f);
+    f.state = PRG_STATE_ARMED;   /* operator has armed the vehicle */
+
+    prg_flight_state_t seen_boost   = PRG_STATE_IDLE;
+    prg_flight_state_t seen_descent = PRG_STATE_IDLE;
+    uint32_t boost_t_ms   = 0;
+    uint32_t descent_t_ms = 0;
+
+    for (uint32_t t = 0; t <= DUR_MS; t += DT_MS) {
+        prg_sample_t s;
+        s.t_ms       = t;
+        s.baro_valid = true;
+        s.imu_valid  = true;
+
+        if (t < 1000) {
+            s.accel_g = 1.0f;
+            s.alt_m   = 0.0f;
+        } else if (t < 3000) {
+            s.accel_g = 5.0f;
+            s.alt_m   = profile_alt(t);
+        } else {
+            s.accel_g = 0.0f;
+            s.alt_m   = profile_alt(t);
+        }
+
+        prg_flight_update(&f, &s);
+
+        if (f.state == PRG_STATE_BOOST && seen_boost == PRG_STATE_IDLE) {
+            seen_boost = PRG_STATE_BOOST;
+            boost_t_ms = t;
+        }
+        if (f.state == PRG_STATE_DESCENT && seen_descent == PRG_STATE_IDLE) {
+            seen_descent = PRG_STATE_DESCENT;
+            descent_t_ms = t;
+        }
+    }
+
+    printf("        entered BOOST at %u ms, entered DESCENT at %u ms\n",
+           boost_t_ms, descent_t_ms);
+
+    CHECK(seen_boost == PRG_STATE_BOOST, "state reached BOOST");
+    CHECK(boost_t_ms >= 1000 && boost_t_ms < 1200,
+          "BOOST entered shortly after ignition, not before or much later");
+
+    CHECK(seen_descent == PRG_STATE_DESCENT, "state reached DESCENT");
+    CHECK(descent_t_ms > 5000 && descent_t_ms < 5300,
+          "DESCENT entered shortly after true apogee");
+
+    CHECK(f.state == PRG_STATE_DESCENT, "final state is DESCENT");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -208,7 +265,7 @@ int main(void)
     test_velocity_detector_with_noise();
     test_boost_detects_ignition();
     test_boost_ignores_a_single_jolt();
-
+    test_state_machine_full_flight();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
