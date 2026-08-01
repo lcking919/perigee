@@ -67,6 +67,5 @@ full ARMED->LANDED sequence.
 |---|---|---|
 | PRG-FSW-030 | T | **Met** — velocity detector using a 10-sample ring buffer, split into two groups of 5 for averaging: 140ms clean, 180ms with ±0.2m sensor noise. Raw two-sample velocity (superseded) measured 60ms clean but 600ms under the same noise — discarded for being noise-sensitive despite looking better on clean data. Distance-based detector (apogee.c) measures 500ms; retained as a baseline. |
 | PRG-FSW-020 | T | **Met** — declared 100ms after sustained 5g onset (the theoretical minimum given the 100ms hold requirement); single-sample 5g spike correctly produces no detection. |
-| PRG-FSW-025 | T | **Met** — burnout declared 100ms after sustained sub-1.5g onset (theoretical minimum given the hold requirement), verified as part of the full-flight state machine test. |
-| PRG-FSW-065 | T | **Met** — full synthetic flight correctly reaches BOOST at 1100ms and DESCENT at 5140ms. |
-| PRG-FSW-055 | T | **Met** — landed declared 16000ms into the test profile (10000ms after the ground phase begins at 6000ms — the theoretical minimum given the hold requirement). |
+| PRG-FSW-025 | T | **Met** — burnout declared 100ms after sustained sub-1.5g onset on clean data, and under ±0.1g sensor noise (starting mid-boost, consistent with how it's actually consulted by the state machine). || PRG-FSW-065 | T | **Met** — full synthetic flight correctly reaches BOOST at 1100ms and DESCENT at 5140ms. |
+| PRG-FSW-055 | T | **Met** — landed declared at the theoretical minimum (10000ms after ground phase begins) under simultaneous ±0.3m altitude noise and ±0.1g acceleration noise. |

@@ -260,6 +260,66 @@ static void test_state_machine_full_flight(void)
     CHECK(f.state == PRG_STATE_LANDED, "final state is LANDED");
 }
 
+static void test_burnout_with_noise(void)
+{
+    printf("test: burnout detection with sensor noise\n");
+
+    prg_burnout_t d;
+    prg_burnout_init(&d);
+
+    unsigned seed = 99;
+
+    /* Burnout is only ever fed samples once boost has already occurred -
+       start this test mid-burn, not from the pad. */
+    for (uint32_t t = 1100; t < 5000; t += DT_MS) {
+        seed = seed * 1103515245u + 12345u;
+        float noise = (((float)((seed >> 16) & 0x7fff) / 16383.5f) - 1.0f) * 0.1f;
+
+        prg_sample_t s = make(t, 0.0f, true);
+        s.accel_g = (t < 3000) ? (5.0f + noise) : (0.0f + noise);
+
+        prg_burnout_update(&d, &s);
+    }
+
+    CHECK(d.detected, "burnout detected under noise");
+    if (d.detected) {
+        long lag = (long)d.detected_t_ms - 3000L;
+        printf("        burnout at 3000 ms, declared %u ms, lag %ld ms\n",
+               d.detected_t_ms, lag);
+        CHECK(lag >= 0 && lag < 500, "declared soon after true burnout");
+    }
+}
+
+static void test_landing_with_noise(void)
+{
+    printf("test: landing detection with sensor noise\n");
+
+    prg_landing_t d;
+    prg_landing_init(&d);
+
+    unsigned seed = 7;
+
+    for (uint32_t t = 0; t < 15000; t += DT_MS) {
+        seed = seed * 1103515245u + 12345u;
+        float alt_noise = (((float)((seed >> 16) & 0x7fff) / 16383.5f) - 1.0f) * 0.3f;
+
+        seed = seed * 1103515245u + 12345u;
+        float accel_noise = (((float)((seed >> 16) & 0x7fff) / 16383.5f) - 1.0f) * 0.1f;
+
+        prg_sample_t s = make(t, 100.0f + alt_noise, true);
+        s.accel_g = 1.0f + accel_noise;
+
+        prg_landing_update(&d, &s);
+    }
+
+    CHECK(d.detected, "landing detected under noise");
+    if (d.detected) {
+        printf("        declared landed at %u ms\n", d.detected_t_ms);
+        CHECK(d.detected_t_ms >= PRG_LANDING_HOLD_MS,
+              "not declared before the minimum possible hold time");
+    }
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -272,6 +332,8 @@ int main(void)
     test_boost_detects_ignition();
     test_boost_ignores_a_single_jolt();
     test_state_machine_full_flight();
+    test_landing_with_noise();
+    test_burnout_with_noise();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
