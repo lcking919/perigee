@@ -8,7 +8,8 @@ TEST_SRCS = \
 	core/src/boost.c \
 	core/src/burnout.c \
 	core/src/landing.c \
-	core/src/state.c
+	core/src/state.c \
+	core/src/log.c
 
 .PHONY: test clean
 

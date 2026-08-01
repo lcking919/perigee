@@ -2,6 +2,7 @@
 #include "perigee/vapogee.h"
 #include "perigee/boost.h"
 #include "perigee/state.h"
+#include "perigee/log.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -320,6 +321,44 @@ static void test_landing_with_noise(void)
     }
 }
 
+static void test_log_write_and_read_back(void)
+{
+    printf("test: log write/read round trip\n");
+
+    const char *path = "/tmp/perigee_test_log.bin";
+
+    FILE *out;
+    CHECK(prg_log_open(&out, path), "log file opened for writing");
+
+    for (uint32_t t = 0; t < 5; t++) {
+        prg_log_record_t rec;
+        rec.t_ms       = t * 20u;
+        rec.alt_m      = (float)t * 1.5f;
+        rec.accel_g    = 1.0f;
+        rec.baro_valid = 1u;
+        rec.imu_valid  = 1u;
+        rec.state      = PRG_STATE_COAST;
+
+        CHECK(prg_log_write(out, &rec), "record written");
+    }
+    prg_log_close(out);
+
+    FILE *check = fopen(path, "rb");
+    CHECK(check != NULL, "log file reopened for reading");
+
+    int count = 0;
+    prg_log_record_t rec;
+    while (prg_log_read(check, &rec)) {
+        CHECK(rec.t_ms == (uint32_t)(count * 20), "timestamp matches expected sequence");
+        CHECK(rec.state == PRG_STATE_COAST, "state matches what was written");
+        count++;
+    }
+    fclose(check);
+
+    printf("        read back %d records\n", count);
+    CHECK(count == 5, "read back exactly 5 records");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -334,6 +373,7 @@ int main(void)
     test_state_machine_full_flight();
     test_landing_with_noise();
     test_burnout_with_noise();
+    test_log_write_and_read_back();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
