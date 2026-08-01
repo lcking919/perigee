@@ -5,6 +5,8 @@
 #include "perigee/log.h"
 #include <stdio.h>
 #include <math.h>
+#include <unistd.h>
+#include <string.h>
 
 
 static int failures = 0;
@@ -394,6 +396,41 @@ static void test_log_write_and_read_back(void)
     CHECK(count == 5, "read back exactly 5 records");
 }
 
+static void test_log_next_path_skips_existing(void)
+{
+    printf("test: log_next_path finds the next unused filename\n");
+
+    /* clean slate - remove anything left over from a previous run */
+    unlink("flight_001.bin");
+    unlink("flight_002.bin");
+    unlink("flight_003.bin");
+
+    char path[64];
+
+    CHECK(prg_log_next_path(path, sizeof(path)), "found a path with nothing existing");
+    CHECK(strcmp(path, "flight_001.bin") == 0, "first call returns flight_001.bin");
+
+    /* create flight_001.bin so it's "already taken" */
+    FILE *f1 = fopen("flight_001.bin", "wb");
+    CHECK(f1 != NULL, "created flight_001.bin to simulate an existing flight");
+    fclose(f1);
+
+    CHECK(prg_log_next_path(path, sizeof(path)), "found a path with flight_001 taken");
+    CHECK(strcmp(path, "flight_002.bin") == 0, "second call skips to flight_002.bin");
+
+    /* also take flight_002.bin */
+    FILE *f2 = fopen("flight_002.bin", "wb");
+    CHECK(f2 != NULL, "created flight_002.bin");
+    fclose(f2);
+
+    CHECK(prg_log_next_path(path, sizeof(path)), "found a path with 001 and 002 taken");
+    CHECK(strcmp(path, "flight_003.bin") == 0, "third call skips to flight_003.bin");
+
+    /* clean up after ourselves */
+    unlink("flight_001.bin");
+    unlink("flight_002.bin");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -409,6 +446,7 @@ int main(void)
     test_landing_with_noise();
     test_burnout_with_noise();
     test_log_write_and_read_back();
+    test_log_next_path_skips_existing();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
