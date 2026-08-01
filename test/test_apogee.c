@@ -259,6 +259,41 @@ static void test_state_machine_full_flight(void)
     CHECK(seen_descent == PRG_STATE_DESCENT, "state reached DESCENT");
     CHECK(seen_landed == PRG_STATE_LANDED, "state reached LANDED");
     CHECK(f.state == PRG_STATE_LANDED, "final state is LANDED");
+
+    prg_log_close(f.log_file);
+
+    FILE *check = fopen("/tmp/perigee_flight_test.bin", "rb");
+    CHECK(check != NULL, "flight log file reopened for verification");
+
+    uint32_t record_count   = 0;
+    uint32_t boost_seen_t    = 0;
+    uint32_t landed_seen_t   = 0;
+    bool     boost_found     = false;
+    bool     landed_found    = false;
+
+    prg_log_record_t rec;
+    while (prg_log_read(check, &rec)) {
+        record_count++;
+
+        if (rec.state == (uint8_t)PRG_STATE_BOOST && !boost_found) {
+            boost_found = true;
+            boost_seen_t = rec.t_ms;
+        }
+        if (rec.state == (uint8_t)PRG_STATE_LANDED && !landed_found) {
+            landed_found = true;
+            landed_seen_t = rec.t_ms;
+        }
+    }
+    fclose(check);
+
+    printf("        log contains %u records\n", record_count);
+
+    CHECK(record_count == (TOTAL_MS / DT_MS) + 1,
+          "record count matches number of samples fed in");
+    CHECK(boost_found && boost_seen_t == boost_t_ms + DT_MS,
+          "log shows BOOST one sample after the transition, as designed");
+    CHECK(landed_found && landed_seen_t == landed_t_ms + DT_MS,
+          "log shows LANDED one sample after the transition, as designed");
 }
 
 static void test_burnout_with_noise(void)
