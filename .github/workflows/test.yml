@@ -10,5 +10,6 @@ jobs:
         run: |
           gcc -std=c11 -Wall -Wextra -Werror -Icore/include \
               test/test_apogee.c core/src/apogee.c core/src/vapogee.c core/src/boost.c \
+              core/src/burnout.c core/src/landing.c core/src/state.c \
               -lm -o test_apogee
           ./test_apogee
