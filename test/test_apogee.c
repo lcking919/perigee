@@ -1,5 +1,6 @@
 #include "perigee/apogee.h"
 #include "perigee/vapogee.h"
+#include "perigee/boost.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -142,6 +143,60 @@ static void test_velocity_detector_with_noise(void)
     }
 }
 
+static void test_boost_detects_ignition(void)
+{
+    printf("test: boost detection on a simple burn profile\n");
+
+    prg_boost_t det;
+    prg_boost_init(&det);
+
+    /* Pad, sitting still: ~1g, well below threshold */
+    for (uint32_t t = 0; t < 1000; t += DT_MS) {
+        prg_sample_t s = make(t, 0.0f, true);
+        s.accel_g = 1.0f;
+        prg_boost_update(&det, &s);
+    }
+
+    CHECK(!det.detected, "not detected while sitting on the pad");
+
+    /* Ignition at t=1000ms: acceleration jumps to 5g and holds */
+    for (uint32_t t = 1000; t < 3000; t += DT_MS) {
+        prg_sample_t s = make(t, 0.0f, true);
+        s.accel_g = 5.0f;
+        bool hit = prg_boost_update(&det, &s);
+        if (hit && !det.detected) {
+            /* unreachable - det.detected already reflects hit */
+        }
+    }
+
+    CHECK(det.detected, "boost was detected during the burn");
+
+    long delay = (long)det.detected_t_ms - 1000L;
+    printf("        ignition at 1000 ms, declared %u ms, delay %ld ms\n",
+           det.detected_t_ms, delay);
+
+    CHECK(delay >= (long)PRG_BOOST_HOLD_MS,
+          "declared no sooner than the required hold time");
+    CHECK(delay < (long)PRG_BOOST_HOLD_MS + 100,
+          "declared reasonably close to the hold time, not much later");
+}
+
+static void test_boost_ignores_a_single_jolt(void)
+{
+    printf("test: a single spike does not trigger boost\n");
+
+    prg_boost_t det;
+    prg_boost_init(&det);
+
+    for (uint32_t t = 0; t < 2000; t += DT_MS) {
+        prg_sample_t s = make(t, 0.0f, true);
+        s.accel_g = (t == 1000) ? 5.0f : 1.0f;   /* one spike, then back to normal */
+        prg_boost_update(&det, &s);
+    }
+
+    CHECK(!det.detected, "single jolt did not trigger boost");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -151,6 +206,8 @@ int main(void)
     test_single_glitch_rejected();
     test_velocity_detector();
     test_velocity_detector_with_noise();
+    test_boost_detects_ignition();
+    test_boost_ignores_a_single_jolt();
 
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
