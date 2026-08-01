@@ -9,6 +9,6 @@ jobs:
       - name: Build and run host tests
         run: |
           gcc -std=c11 -Wall -Wextra -Werror -Icore/include \
-              test/test_apogee.c core/src/apogee.c core/src/vapogee.c \
+              test/test_apogee.c core/src/apogee.c core/src/vapogee.c core/src/boost.c \
               -lm -o test_apogee
           ./test_apogee
