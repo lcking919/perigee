@@ -1,6 +1,8 @@
 #include "perigee/apogee.h"
+#include "perigee/vapogee.h"
 #include <stdio.h>
 #include <math.h>
+
 
 static int failures = 0;
 
@@ -57,6 +59,7 @@ static void test_detects_on_clean_profile(void)
            det.max_alt_t_ms, det.detected_t_ms, lag);
 
     CHECK(lag > 0, "declared after apogee, not before");
+    CHECK(lag <= 200, "PRG-FSW-030: within 200 ms of apogee");
 }
 
 static void test_no_false_positive_climbing(void)
@@ -93,6 +96,27 @@ static void test_single_glitch_rejected(void)
     CHECK(!det.detected, "single glitch rejected");
 }
 
+static void test_velocity_detector(void)
+{
+    printf("test: velocity detector on clean profile\n");
+
+    prg_vapogee_t det;
+    prg_vapogee_init(&det);
+
+    for (uint32_t t = 0; t <= DUR_MS; t += DT_MS) {
+        prg_sample_t s = make(t, profile_alt(t), true);
+        prg_vapogee_update(&det, &s);
+    }
+
+    CHECK(det.detected, "apogee was detected");
+
+    long lag = (long)det.detected_t_ms - APEX_MS;
+    printf("        declared %u ms, lag %ld ms\n", det.detected_t_ms, lag);
+
+    CHECK(lag > 0, "declared after apogee, not before");
+    CHECK(lag <= 200, "PRG-FSW-030: within 200 ms of apogee");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -100,6 +124,7 @@ int main(void)
     test_detects_on_clean_profile();
     test_no_false_positive_climbing();
     test_single_glitch_rejected();
+    test_velocity_detector();
 
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
