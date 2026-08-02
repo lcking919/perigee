@@ -8,7 +8,7 @@ bool prg_flight_init(prg_flight_t *f, const char *log_path)
     prg_vapogee_init(&f->apogee);
     prg_landing_init(&f->landing);
 
-    return prg_log_open(&f->log_file, log_path);
+    return prg_log_open(&f->log_handle, log_path);
 }
 
 bool prg_flight_init_auto(prg_flight_t *f)
@@ -30,8 +30,8 @@ bool prg_flight_update(prg_flight_t *f, const prg_sample_t *s)
     rec.accel_g    = s->accel_g;
     rec.baro_valid = s->baro_valid ? 1u : 0u;
     rec.imu_valid  = s->imu_valid  ? 1u : 0u;
-    rec.state      = f->state;
-    prg_log_write(f->log_file, &rec);
+    rec.state      = (uint8_t)f->state;
+    prg_log_write(f->log_handle, &rec);
 
 
     switch (f->state) {

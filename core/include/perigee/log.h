@@ -13,10 +13,10 @@ typedef struct {
     uint8_t  state;
 } prg_log_record_t;
 
-bool prg_log_open(FILE **f, const char *path);
-bool prg_log_write(FILE *f, const prg_log_record_t *rec);
-bool prg_log_read(FILE *f, prg_log_record_t *rec);
+bool prg_log_open(void **handle, const char *path);
+bool prg_log_write(void *handle, const prg_log_record_t *rec);
+bool prg_log_read(void *handle, prg_log_record_t *rec);
+void prg_log_close(void *handle);
 bool prg_log_next_path(char *buf, size_t buf_len);
-void prg_log_close(FILE *f);
 
 #endif

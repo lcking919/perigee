@@ -27,8 +27,7 @@ typedef struct {
     prg_burnout_t      burnout;
     prg_vapogee_t      apogee;
     prg_landing_t      landing;
-    FILE               *log_file;
-
+    void               *log_handle;
 } prg_flight_t;
 
 bool prg_flight_init(prg_flight_t *f, const char *log_path);

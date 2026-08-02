@@ -265,7 +265,7 @@ static void test_state_machine_full_flight(void)
     CHECK(seen_landed == PRG_STATE_LANDED, "state reached LANDED");
     CHECK(f.state == PRG_STATE_LANDED, "final state is LANDED");
 
-    prg_log_close(f.log_file);
+    prg_log_close(f.log_handle);
 
     FILE *check = fopen("/tmp/perigee_flight_test.bin", "rb");
     CHECK(check != NULL, "flight log file reopened for verification");
@@ -367,7 +367,7 @@ static void test_log_write_and_read_back(void)
 
     const char *path = "/tmp/perigee_test_log.bin";
 
-    FILE *out;
+    void *out;
     CHECK(prg_log_open(&out, path), "log file opened for writing");
 
     for (uint32_t t = 0; t < 5; t++) {
@@ -449,7 +449,7 @@ static void test_flight_init_auto_does_not_overwrite(void)
     s.t_ms = 0; s.alt_m = 0.0f; s.accel_g = 1.0f;
     s.baro_valid = true; s.imu_valid = true;
     prg_flight_update(&f1, &s);
-    prg_log_close(f1.log_file);
+    prg_log_close(f1.log_handle);
 
     FILE *check1 = fopen("flight_001.bin", "rb");
     CHECK(check1 != NULL, "first flight created flight_001.bin");
@@ -459,7 +459,7 @@ static void test_flight_init_auto_does_not_overwrite(void)
     CHECK(prg_flight_init_auto(&f2), "second flight initialized");
 
     prg_flight_update(&f2, &s);
-    prg_log_close(f2.log_file);
+    prg_log_close(f2.log_handle);
 
     FILE *check2 = fopen("flight_002.bin", "rb");
     CHECK(check2 != NULL, "second flight created flight_002.bin, not overwriting flight_001");
