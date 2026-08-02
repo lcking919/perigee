@@ -61,6 +61,17 @@ end-to-end test.
 *Verification:* T — test_state_machine_full_flight in test_apogee.c,
 full ARMED->LANDED sequence.
 
+## Data recording
+
+**PRG-DAT-040** The flight computer shall not overwrite data from a
+previous flight.
+
+*Rationale:* Sequential file naming prevents loss of a prior flight when
+the FC is powered on for a second time.
+
+*Verification:* T — test_flight_init_auto_does_not_overwrite in
+test_apogee.c.
+
 ## Verification matrix
 
 | Requirement | Method | Status |
@@ -69,3 +80,4 @@ full ARMED->LANDED sequence.
 | PRG-FSW-020 | T | **Met** — declared 100ms after sustained 5g onset (the theoretical minimum given the 100ms hold requirement); single-sample 5g spike correctly produces no detection. |
 | PRG-FSW-025 | T | **Met** — burnout declared 100ms after sustained sub-1.5g onset on clean data, and under ±0.1g sensor noise (starting mid-boost, consistent with how it's actually consulted by the state machine). || PRG-FSW-065 | T | **Met** — full synthetic flight correctly reaches BOOST at 1100ms and DESCENT at 5140ms. |
 | PRG-FSW-055 | T | **Met** — landed declared at the theoretical minimum (10000ms after ground phase begins) under simultaneous ±0.3m altitude noise and ±0.1g acceleration noise. |
+| PRG-DAT-040 | T | **Met** — test_flight_init_auto_does_not_overwrite confirms a second flight lands on flight_002.bin and flight_001.bin's content remains intact and readable. |
