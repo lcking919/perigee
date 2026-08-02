@@ -21,7 +21,7 @@ set(CMAKE_CXX_SIMULATE_ID "")
 set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "GNU")
 set(CMAKE_CXX_COMPILER_APPLE_SYSROOT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
-set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "armv6")
+set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "")
 
 
 
@@ -90,9 +90,9 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/arm-none-eabi/include/c++/14.2.1;/usr/lib/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/nofp;/usr/lib/arm-none-eabi/include/c++/14.2.1/backward;/usr/lib/gcc/arm-none-eabi/14.2.1/include;/usr/lib/gcc/arm-none-eabi/14.2.1/include-fixed;/usr/lib/arm-none-eabi/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/arm-none-eabi/include/c++/14.2.1;/usr/lib/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v8-m.main+fp/softfp;/usr/lib/arm-none-eabi/include/c++/14.2.1/backward;/usr/lib/gcc/arm-none-eabi/14.2.1/include;/usr/lib/gcc/arm-none-eabi/14.2.1/include-fixed;/usr/lib/arm-none-eabi/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/arm-none-eabi/14.2.1/thumb/v6-m/nofp;/usr/lib/arm-none-eabi/lib/thumb/v6-m/nofp;/usr/lib/gcc/arm-none-eabi/14.2.1;/usr/lib/arm-none-eabi/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/arm-none-eabi/14.2.1/thumb/v8-m.main+fp/softfp;/usr/lib/arm-none-eabi/lib/thumb/v8-m.main+fp/softfp;/usr/lib/gcc/arm-none-eabi/14.2.1;/usr/lib/arm-none-eabi/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 

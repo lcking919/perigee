@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
+set(PICO_BOARD pico2_w CACHE STRING "Board type")
 include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 project(perigee C CXX ASM)

@@ -139,3 +139,9 @@ double prg_bmp388_compensate_pressure(uint32_t raw_pressure, const prg_bmp388_ca
 
     return comp_press;
 }
+
+bool prg_bmp388_enable(prg_i2c_bus_t *bus)
+{
+    uint8_t value = PRG_BMP388_PWR_CTRL_NORMAL;
+    return bus->write(bus, PRG_BMP388_ADDR, PRG_BMP388_REG_PWR_CTRL, &value, 1);
+}

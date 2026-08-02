@@ -1,0 +1,14 @@
+# Target labels
+ picotoolBuild
+# Source files and their labels
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild-complete.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule
+/home/lking/projects/perigee/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule

@@ -16,6 +16,9 @@
 #define PRG_BMP388_MIN_PRES_PA   30000.0
 #define PRG_BMP388_MAX_PRES_PA   125000.0
 
+#define PRG_BMP388_REG_PWR_CTRL   0x1B
+#define PRG_BMP388_PWR_CTRL_NORMAL 0x33
+
 typedef struct {
     double par_t1, par_t2, par_t3;
     double par_p1, par_p2, par_p3, par_p4, par_p5;
@@ -31,6 +34,7 @@ typedef struct {
 bool prg_bmp388_read_calib(prg_i2c_bus_t *bus, prg_bmp388_calib_t *calib);
 bool prg_bmp388_read_raw(prg_i2c_bus_t *bus, prg_bmp388_raw_t *out);
 bool prg_bmp388_check_id(prg_i2c_bus_t *bus);
+bool prg_bmp388_enable(prg_i2c_bus_t *bus);
 
 double prg_bmp388_compensate_temperature(uint32_t raw_temp, prg_bmp388_calib_t *calib);
 double prg_bmp388_compensate_pressure(uint32_t raw_pressure, const prg_bmp388_calib_t *calib);

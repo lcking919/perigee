@@ -38,6 +38,12 @@ int main(void)
     }
     printf("PASS: calibration data read\n");
 
+    if (!prg_bmp388_enable(&bus)) {
+        printf("FAIL: could not enable normal power mode\n");
+        while (true) { sleep_ms(1000); }
+    }
+    printf("PASS: sensor enabled\n");
+
     while (true) {
         prg_bmp388_raw_t raw;
         if (!prg_bmp388_read_raw(&bus, &raw)) {

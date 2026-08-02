@@ -156,19 +156,19 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/hardware_gpio/gpio.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o: /home/lking/pico-sdk/src/rp2040/pico_platform/platform.c
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o -c /home/lking/pico-sdk/src/rp2040/pico_platform/platform.c
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o: /home/lking/pico-sdk/src/rp2350/pico_platform/platform.c
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o -c /home/lking/pico-sdk/src/rp2350/pico_platform/platform.c
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2040/pico_platform/platform.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2350/pico_platform/platform.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2040/pico_platform/platform.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2350/pico_platform/platform.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.s
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_common/common.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_common/common.c.o: /home/lking/pico-sdk/src/rp2_common/pico_platform_common/common.c
@@ -588,18 +588,19 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.o   -c /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o: /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o -c /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.s
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: /home/lking/pico-sdk/src/rp2_common/pico_runtime/runtime.c
@@ -657,23 +658,9 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: /home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o -c /home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
-
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: /home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
@@ -684,50 +671,24 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_a
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o: /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.s
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.s
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -738,63 +699,62 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_mat
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: /home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o: /home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.s
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -805,23 +765,49 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.i
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.s
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.s
+
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S
+
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.i
+
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.s
+
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o: CMakeFiles/perigee.dir/flags.make
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o: /home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S
+
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.i"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.i
+
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.s"
+	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.s
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: /home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i: cmake_force
@@ -832,23 +818,10 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: CMakeFiles/perigee.dir/flags.make
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: /home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S > CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i
-
-CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s"
-	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.s
-
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: /home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i: cmake_force
@@ -862,7 +835,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: /home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -c /home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i: cmake_force
@@ -876,7 +849,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_d
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: /home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i: cmake_force
@@ -890,7 +863,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_i
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o: /home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -903,7 +876,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: /home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building ASM object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o   -c /home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i: cmake_force
@@ -917,7 +890,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_crt0/crt0.S.s: cm
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: /home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i: cmake_force
@@ -931,7 +904,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/ne
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o: /home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.i: cmake_force
@@ -945,7 +918,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/cx
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: /home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -959,7 +932,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s: 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: /home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
@@ -973,7 +946,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: /home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
@@ -987,7 +960,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_u
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: /home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
@@ -1001,7 +974,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: /home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.o -c /home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
@@ -1015,7 +988,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_flash/flash.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: /home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o -c /home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i: cmake_force
@@ -1029,7 +1002,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xip_cache/xip
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o: /home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.i: cmake_force
@@ -1043,7 +1016,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_res
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: /home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
@@ -1057,7 +1030,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: /home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
@@ -1071,7 +1044,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o: /home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
@@ -1085,7 +1058,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd.c.s: cmak
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: /home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
@@ -1099,7 +1072,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
@@ -1113,7 +1086,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_dev
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
@@ -1127,7 +1100,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
@@ -1141,7 +1114,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
@@ -1155,7 +1128,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_devi
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
@@ -1169,7 +1142,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/hid/hid_device.
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
@@ -1183,7 +1156,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_devic
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
@@ -1197,7 +1170,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/msc/msc_device.
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
@@ -1211,7 +1184,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_d
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
@@ -1225,7 +1198,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/net/ncm_device.
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
@@ -1239,7 +1212,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_d
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
@@ -1253,7 +1226,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/vendor/vendor_d
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: /home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
@@ -1267,7 +1240,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/video/video_dev
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o: /home/lking/pico-sdk/lib/tinyusb/src/tusb.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/tusb.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
@@ -1281,7 +1254,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake_force
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: /home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o -c /home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
@@ -1295,7 +1268,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: /home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
@@ -1309,7 +1282,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_de
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o: /home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o -c /home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.i: cmake_force
@@ -1323,7 +1296,7 @@ CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thre
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: CMakeFiles/perigee.dir/flags.make
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: /home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: CMakeFiles/perigee.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o -MF CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o.d -o CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o -c /home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
 
 CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
@@ -1342,7 +1315,7 @@ perigee_OBJECTS = \
 "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_common/common.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_panic/custom_panic_function.S.o" \
@@ -1373,25 +1346,23 @@ perigee_OBJECTS = \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_flash/flash.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o" \
+"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o" \
-"CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" \
 "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o" \
@@ -1437,7 +1408,7 @@ perigee.elf: CMakeFiles/perigee.dir/drivers/src/bmp388.c.o
 perigee.elf: CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2040/pico_platform/platform.c.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2350/pico_platform/platform.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_platform_panic/custom_panic_function.S.o
@@ -1468,25 +1439,23 @@ perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_boot
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_divider/divider.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_math.c.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_math.c.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o
+perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
-perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
@@ -1523,13 +1492,9 @@ perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_fix/
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o
 perigee.elf: CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 perigee.elf: CMakeFiles/perigee.dir/build.make
-perigee.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-perigee.elf: /home/lking/pico-sdk/src/rp2040/pico_platform/memmap_default.ld
-perigee.elf: /home/lking/pico-sdk/src/rp2040/pico_platform/script_include/memory_psram.incl
-perigee.elf: /home/lking/pico-sdk/src/rp2040/pico_platform/script_include/section_boot2.incl
-perigee.elf: /home/lking/pico-sdk/src/rp2040/pico_platform/script_include/section_platform_end.incl
-perigee.elf: /home/lking/pico-sdk/src/rp2040/pico_platform/script_include/sections_default_text.incl
-perigee.elf: /home/lking/pico-sdk/src/rp2040/pico_platform/script_include/sections_psram.incl
+perigee.elf: pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded.S.o
+perigee.elf: /home/lking/pico-sdk/src/rp2350/pico_platform/memmap_default.ld
+perigee.elf: /home/lking/pico-sdk/src/rp2350/pico_platform/script_include/section_platform_end.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/default_rodata_excludes.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/default_text_excludes.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memmap_default.incl
@@ -1537,10 +1502,12 @@ perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_inclu
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_extra.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_flash.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_generated.incl
+perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_psram.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_ram.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_scratch.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/memory_xip_ram.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/section_binary_info.incl
+perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/section_boot2.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/section_default_data.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/section_default_rodata.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/section_default_text.incl
@@ -1566,17 +1533,20 @@ perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_inclu
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_arm_ex.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_default.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_default_data.incl
+perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_default_text.incl
+perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_psram.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_scratch.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_stack.incl
 perigee.elf: /home/lking/pico-sdk/src/rp2_common/pico_standard_link/script_include/set_memory_locations.incl
 perigee.elf: CMakeFiles/perigee.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Linking CXX executable perigee.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lking/projects/perigee/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Linking CXX executable perigee.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/perigee.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/lking/projects/perigee/build/perigee.elf > perigee.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/lking/projects/perigee/build/perigee.elf >> perigee.dis
+	_deps/picotool/picotool coprodis --quiet perigee.dis perigee.dis
 	/usr/bin/arm-none-eabi-objcopy -Oihex /home/lking/projects/perigee/build/perigee.elf perigee.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/lking/projects/perigee/build/perigee.elf perigee.bin
-	_deps/picotool/picotool uf2 convert --quiet /home/lking/projects/perigee/build/perigee.elf perigee.uf2 --family rp2040
+	_deps/picotool/picotool uf2 convert --quiet /home/lking/projects/perigee/build/perigee.elf perigee.uf2 --family rp2350-arm-s --abs-block
 
 # Rule to build all files generated by this target.
 CMakeFiles/perigee.dir/build: perigee.elf

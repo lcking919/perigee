@@ -62,7 +62,6 @@ events:
     search_context:
       ENV{PATH}:
         - "/home/lking/.opencode/bin"
-        - "/home/lking/.opencode/bin"
         - "/home/lking/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli"
         - "/home/lking/.local/bin"
         - "/home/lking/.opencode/bin"
