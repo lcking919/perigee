@@ -102,47 +102,66 @@ int main(void)
 
     bool logging = false;
     bool button_was_pressed = false;
+    uint32_t press_start_ms = 0;
+    bool     long_press_fired = false;
+    #define LONG_PRESS_MS 3000
 
     while (true) {
         bool button_is_pressed = (gpio_get(ARM_BUTTON_PIN) == 0);
 
         if (button_is_pressed && !button_was_pressed) {
-            logging = !logging;
+            press_start_ms = to_ms_since_boot(get_absolute_time());
+            long_press_fired = false;
+        }
 
-            if (logging) {
-                if (prg_log_open(&log_handle, "flight_test.bin")) {
-                    have_log = true;
-                    printf("ARMED - logging started, writing to flight_test.bin\n");
-                } else {
-                    printf("ARMED - logging started, but LOG FILE FAILED TO OPEN\n");
-                    have_log = false;
-                }
-            } else {
-                if (have_log) {
-                    prg_log_close(log_handle);
-                    have_log = false;
-                }
-                printf("STOPPED - logging paused, file closed\n");
+        if (button_is_pressed && button_was_pressed && !long_press_fired) {
+            uint32_t held = to_ms_since_boot(get_absolute_time()) - press_start_ms;
+            if (held >= LONG_PRESS_MS) {
+                long_press_fired = true;
 
+                printf("=== LONG PRESS: dumping current log ===\n");
                 void *read_handle;
                 if (prg_log_open_read(&read_handle, "flight_test.bin")) {
-                    printf("--- reading back flight_test.bin ---\n");
+                    printf("t_ms,pressure_pa,accel_z_g\n");
                     prg_log_record_t rec;
                     int count = 0;
                     while (prg_log_read(read_handle, &rec)) {
-                        printf("  [%d] t=%u  press=%.2f  accel_z=%.3f\n",
-                               count, rec.t_ms, rec.alt_m, rec.accel_g);
+                        printf("%u,%.2f,%.3f\n", rec.t_ms, rec.alt_m, rec.accel_g);
                         count++;
                     }
-                    printf("--- %d records read back ---\n", count);
                     prg_log_close(read_handle);
+                    printf("=== END OF DUMP (%d records) ===\n", count);
                 } else {
-                    printf("could not reopen file for reading\n");
+                    printf("could not open log for dump\n");
                 }
             }
-
-            gpio_put(LOG_LED_PIN, logging ? 1 : 0);
         }
+
+        if (!button_is_pressed && button_was_pressed) {
+            if (!long_press_fired) {
+                logging = !logging;
+
+                if (logging) {
+                    if (prg_log_open(&log_handle, "flight_test.bin")) {
+                        have_log = true;
+                        printf("ARMED - logging started, writing to flight_test.bin\n");
+                    } else {
+                        printf("ARMED - logging started, but LOG FILE FAILED TO OPEN\n");
+                        have_log = false;
+                    }
+                } else {
+                    if (have_log) {
+                        prg_log_close(log_handle);
+                        have_log = false;
+                    }
+                    printf("STOPPED - logging paused, file closed\n");
+                }
+
+                gpio_put(LOG_LED_PIN, logging ? 1 : 0);
+            }
+        }
+
+        button_was_pressed = button_is_pressed;
         button_was_pressed = button_is_pressed;
 
         if (logging) {

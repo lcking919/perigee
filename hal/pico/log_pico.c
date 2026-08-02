@@ -4,7 +4,7 @@
 
 bool prg_log_open(void **handle, const char *path)
 {
-    int fd = pico_open(path, LFS_O_WRONLY | LFS_O_CREAT);
+    int fd = pico_open(path, LFS_O_WRONLY | LFS_O_CREAT | LFS_O_TRUNC);
     if (fd < 0) {
         return false;
     }
