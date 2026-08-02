@@ -5,6 +5,7 @@
 #include "perigee/log.h"
 #include "i2c_fake.h"
 #include "perigee/bmp388.h"
+#include "perigee/mpu6050.h"
 #include <stdio.h>
 #include <math.h>
 #include <unistd.h>
@@ -568,6 +569,66 @@ static void test_bmp388_read_raw(void)
           "temperature bytes combined in the correct order");
 }
 
+static void test_mpu6050_read_and_convert(void)
+{
+    printf("test: MPU6050 read and convert\n");
+
+    prg_i2c_fake_t fake;
+    prg_i2c_fake_init(&fake, PRG_MPU6050_ADDR);
+    prg_i2c_bus_t bus = prg_i2c_fake_as_bus(&fake);
+
+    fake.registers[PRG_MPU6050_REG_WHO_AM_I] = PRG_MPU6050_WHO_AM_I_VAL;
+    CHECK(prg_mpu6050_check_id(&bus), "genuine chip ID accepted");
+
+    fake.registers[PRG_MPU6050_REG_WHO_AM_I] = 0x00;
+    CHECK(!prg_mpu6050_check_id(&bus), "wrong chip ID rejected");
+    fake.registers[PRG_MPU6050_REG_WHO_AM_I] = PRG_MPU6050_WHO_AM_I_VAL;
+
+    CHECK(prg_mpu6050_wake(&bus), "wake write succeeds");
+    CHECK(fake.registers[PRG_MPU6050_REG_PWR_MGMT_1] == 0x00,
+          "wake actually cleared PWR_MGMT_1");
+
+    /* accel_x = +16384 (should read as +1.0 g)   -> 0x40, 0x00 */
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 0]  = 0x40;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 1]  = 0x00;
+    /* accel_y = -16384 (should read as -1.0 g)   -> 0xC0, 0x00 */
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 2]  = 0xC0;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 3]  = 0x00;
+    /* accel_z = 0 */
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 4]  = 0x00;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 5]  = 0x00;
+    /* temp_raw = 0 -> should convert to 36.53 C exactly */
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 6]  = 0x00;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 7]  = 0x00;
+    /* gyro_x = 131 (should read as 1.0 deg/s)    -> 0x00, 0x83 */
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 8]  = 0x00;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 9]  = 0x83;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 10] = 0x00;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 11] = 0x00;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 12] = 0x00;
+    fake.registers[PRG_MPU6050_REG_ACCEL_DATA + 13] = 0x00;
+
+    prg_mpu6050_raw_t raw;
+    CHECK(prg_mpu6050_read_raw(&bus, &raw), "raw read succeeds");
+
+    CHECK(raw.accel_x == 16384,  "accel_x raw matches (positive)");
+    CHECK(raw.accel_y == -16384, "accel_y raw matches (negative, sign correct)");
+    CHECK(raw.gyro_x  == 131,    "gyro_x raw matches");
+
+    prg_mpu6050_data_t data;
+    prg_mpu6050_convert(&raw, &data);
+
+    printf("        accel_x: %.3f g (expect 1.000)\n", data.accel_x_g);
+    printf("        accel_y: %.3f g (expect -1.000)\n", data.accel_y_g);
+    printf("        temp: %.3f C (expect 36.530)\n", data.temp_c);
+    printf("        gyro_x: %.3f deg/s (expect 1.000)\n", data.gyro_x_dps);
+
+    CHECK(data.accel_x_g > 0.99 && data.accel_x_g < 1.01, "accel_x converts to ~1.0 g");
+    CHECK(data.accel_y_g < -0.99 && data.accel_y_g > -1.01, "accel_y converts to ~-1.0 g");
+    CHECK(data.temp_c > 36.5 && data.temp_c < 36.6, "temp converts to ~36.53 C at raw=0");
+    CHECK(data.gyro_x_dps > 0.99 && data.gyro_x_dps < 1.01, "gyro_x converts to ~1.0 deg/s");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -588,6 +649,7 @@ int main(void)
     test_fake_i2c_bus_read_write();
     test_bmp388_check_id();
     test_bmp388_read_raw();
+    test_mpu6050_read_and_convert();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
