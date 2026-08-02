@@ -2,10 +2,11 @@
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include "pico_hal.h"
-
+#include "pico/time.h"
 #include "i2c_pico.h"
 #include "perigee/bmp388.h"
 #include "perigee/mpu6050.h"
+#include "perigee/log.h"
 
 #define I2C_SDA_PIN 4
 #define I2C_SCL_PIN 5
@@ -29,11 +30,11 @@ int main(void)
 
     gpio_init(POWER_LED_PIN);
     gpio_set_dir(POWER_LED_PIN, GPIO_OUT);
-    gpio_put(POWER_LED_PIN, 1);   /* on the instant the program starts */
+    gpio_put(POWER_LED_PIN, 1);
 
     gpio_init(LOG_LED_PIN);
     gpio_set_dir(LOG_LED_PIN, GPIO_OUT);
-    gpio_put(LOG_LED_PIN, 0);     /* off until logging actually begins */
+    gpio_put(LOG_LED_PIN, 0);
 
     gpio_init(ARM_BUTTON_PIN);
     gpio_set_dir(ARM_BUTTON_PIN, GPIO_IN);
@@ -80,6 +81,9 @@ int main(void)
     }
     printf("PASS: MPU6050 awake\n");
 
+    void *log_handle = NULL;
+    bool have_log = false;
+
     printf("Press the arm button to start/stop logging (GP%d)...\n", ARM_BUTTON_PIN);
 
     bool logging = false;
@@ -90,8 +94,39 @@ int main(void)
 
         if (button_is_pressed && !button_was_pressed) {
             logging = !logging;
+
+            if (logging) {
+                if (prg_log_open(&log_handle, "flight_test.bin")) {
+                    have_log = true;
+                    printf("ARMED - logging started, writing to flight_test.bin\n");
+                } else {
+                    printf("ARMED - logging started, but LOG FILE FAILED TO OPEN\n");
+                    have_log = false;
+                }
+            } else {
+                if (have_log) {
+                    prg_log_close(log_handle);
+                    have_log = false;
+                }
+                printf("STOPPED - logging paused, file closed\n");
+                void *read_handle;
+                if (prg_log_open_read(&read_handle, "flight_test.bin")) {
+                    printf("--- reading back flight_test.bin ---\n");
+                    prg_log_record_t rec;
+                    int count = 0;
+                    while (prg_log_read(read_handle, &rec)) {
+                        printf("  [%d] t=%u  press=%.2f  accel_z=%.3f\n",
+                               count, rec.t_ms, rec.alt_m, rec.accel_g);
+                        count++;
+                    }
+                    printf("--- %d records read back ---\n", count);
+                    prg_log_close(read_handle);
+                } else {
+                    printf("could not reopen file for reading\n");
+                }
+            }
+
             gpio_put(LOG_LED_PIN, logging ? 1 : 0);
-            printf(logging ? "ARMED - logging started\n" : "STOPPED - logging paused\n");
         }
         button_was_pressed = button_is_pressed;
 
@@ -119,6 +154,19 @@ int main(void)
                    temp_c, press_pa,
                    mpu_data.accel_x_g, mpu_data.accel_y_g, mpu_data.accel_z_g,
                    mpu_data.gyro_x_dps, mpu_data.gyro_y_dps, mpu_data.gyro_z_dps);
+
+            if (have_log) {
+                prg_log_record_t rec;
+                rec.t_ms       = to_ms_since_boot(get_absolute_time());
+                rec.alt_m      = (float)press_pa;
+                rec.accel_g    = (float)mpu_data.accel_z_g;
+                rec.baro_valid = 1;
+                rec.imu_valid  = 1;
+                rec.state      = 0;
+                if (!prg_log_write(log_handle, &rec)) {
+                    printf("LOG WRITE FAILED\n");
+                }
+            }
         }
 
         sleep_ms(50);

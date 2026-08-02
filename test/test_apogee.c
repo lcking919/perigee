@@ -6,6 +6,7 @@
 #include "i2c_fake.h"
 #include "perigee/bmp388.h"
 #include "perigee/mpu6050.h"
+#include "perigee/adxl375.h"
 #include <stdio.h>
 #include <math.h>
 #include <unistd.h>
@@ -629,6 +630,58 @@ static void test_mpu6050_read_and_convert(void)
     CHECK(data.gyro_x_dps > 0.99 && data.gyro_x_dps < 1.01, "gyro_x converts to ~1.0 deg/s");
 }
 
+static void test_adxl375_check_id_and_read(void)
+{
+    printf("test: ADXL375 chip ID and raw read\n");
+
+    prg_i2c_fake_t fake;
+    prg_i2c_fake_init(&fake, PRG_ADXL375_ADDR);
+    prg_i2c_bus_t bus = prg_i2c_fake_as_bus(&fake);
+
+    fake.registers[PRG_ADXL375_REG_DEVID] = PRG_ADXL375_DEVID_VAL;
+    CHECK(prg_adxl375_check_id(&bus), "genuine DEVID accepted");
+
+    fake.registers[PRG_ADXL375_REG_DEVID] = 0x00;
+    CHECK(!prg_adxl375_check_id(&bus), "wrong DEVID rejected");
+    fake.registers[PRG_ADXL375_REG_DEVID] = PRG_ADXL375_DEVID_VAL;
+
+    CHECK(prg_adxl375_enable(&bus), "enable sequence succeeds");
+    CHECK(fake.registers[PRG_ADXL375_REG_DATA_FORMAT] == PRG_ADXL375_DATA_FORMAT_FULL_RES_200G,
+          "DATA_FORMAT set to full-res 200g");
+    CHECK(fake.registers[PRG_ADXL375_REG_POWER_CTL] == PRG_ADXL375_POWER_CTL_MEASURE,
+          "POWER_CTL measure bit set");
+
+    /* x = +100 (0x0064) little-endian -> lo=0x64, hi=0x00 */
+    fake.registers[PRG_ADXL375_REG_DATA + 0] = 0x64;
+    fake.registers[PRG_ADXL375_REG_DATA + 1] = 0x00;
+    /* y = -100 (0xFF9C) little-endian -> lo=0x9C, hi=0xFF */
+    fake.registers[PRG_ADXL375_REG_DATA + 2] = 0x9C;
+    fake.registers[PRG_ADXL375_REG_DATA + 3] = 0xFF;
+    /* z = +4082 (~200g at 49 mg/LSB: 4082*0.049=~200.0) */
+    fake.registers[PRG_ADXL375_REG_DATA + 4] = 0xF2;
+    fake.registers[PRG_ADXL375_REG_DATA + 5] = 0x0F;
+
+    prg_adxl375_raw_t raw;
+    CHECK(prg_adxl375_read_raw(&bus, &raw), "raw read succeeds");
+
+    printf("        raw: x=%d y=%d z=%d\n", raw.x, raw.y, raw.z);
+
+    CHECK(raw.x == 100,  "x raw matches (positive, low byte first confirmed)");
+    CHECK(raw.y == -100, "y raw matches (negative, sign correct)");
+    CHECK(raw.z == 4082, "z raw matches");
+
+    prg_adxl375_data_t data;
+    prg_adxl375_convert(&raw, &data);
+
+    printf("        x: %.3f g (expect 4.900)\n", data.x_g);
+    printf("        y: %.3f g (expect -4.900)\n", data.y_g);
+    printf("        z: %.3f g (expect ~200.0)\n", data.z_g);
+
+    CHECK(data.x_g > 4.85 && data.x_g < 4.95, "x converts to ~4.9 g");
+    CHECK(data.y_g < -4.85 && data.y_g > -4.95, "y converts to ~-4.9 g");
+    CHECK(data.z_g > 199.0 && data.z_g < 201.0, "z converts to ~200 g (near full scale)");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -650,6 +703,7 @@ int main(void)
     test_bmp388_check_id();
     test_bmp388_read_raw();
     test_mpu6050_read_and_convert();
+    test_adxl375_check_id_and_read();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 

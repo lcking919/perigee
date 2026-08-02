@@ -12,7 +12,8 @@ TEST_SRCS = \
 	core/src/log.c \
 	hal/host/i2c_fake.c \
 	drivers/src/bmp388.c \
-	drivers/src/mpu6050.c
+	drivers/src/mpu6050.c \
+	drivers/src/adxl375.c
 
 .PHONY: test clean
 

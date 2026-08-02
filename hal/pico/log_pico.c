@@ -39,3 +39,20 @@ void prg_log_close(void *handle)
     pico_close(fd);
     free(handle);
 }
+
+bool prg_log_open_read(void **handle, const char *path)
+{
+    int fd = pico_open(path, LFS_O_RDONLY);
+    if (fd < 0) {
+        return false;
+    }
+
+    int *stored_fd = malloc(sizeof(int));
+    if (stored_fd == NULL) {
+        pico_close(fd);
+        return false;
+    }
+    *stored_fd = fd;
+    *handle = (void *)stored_fd;
+    return true;
+}
