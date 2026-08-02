@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS  = -std=c11 -Wall -Wextra -Werror -Icore/include
+CFLAGS  = -std=c11 -Wall -Wextra -Werror -Icore/include -Ihal/host
 
 TEST_SRCS = \
 	test/test_apogee.c \
@@ -9,7 +9,8 @@ TEST_SRCS = \
 	core/src/burnout.c \
 	core/src/landing.c \
 	core/src/state.c \
-	core/src/log.c
+	core/src/log.c \
+	hal/host/i2c_fake.c
 
 .PHONY: test clean
 

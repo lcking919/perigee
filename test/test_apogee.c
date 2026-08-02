@@ -3,6 +3,7 @@
 #include "perigee/boost.h"
 #include "perigee/state.h"
 #include "perigee/log.h"
+#include "i2c_fake.h"
 #include <stdio.h>
 #include <math.h>
 #include <unistd.h>
@@ -473,6 +474,47 @@ static void test_flight_init_auto_does_not_overwrite(void)
     unlink("flight_002.bin");
 }
 
+static void test_fake_i2c_bus_read_write(void)
+{
+    printf("test: fake I2C bus read/write mechanics\n");
+
+    prg_i2c_fake_t fake;
+    prg_i2c_fake_init(&fake, 0x77);
+
+    prg_i2c_bus_t bus = prg_i2c_fake_as_bus(&fake);
+
+    /* manually seed a register, as if a real chip had this value burned in */
+    fake.registers[0x00] = 0x50;
+
+    uint8_t chip_id = 0;
+    bool ok = bus.read(&bus, 0x77, 0x00, &chip_id, 1);
+
+    CHECK(ok, "read call reports success");
+    CHECK(chip_id == 0x50, "read back the chip ID we seeded");
+
+    /* reading the wrong device address should fail */
+    uint8_t junk = 0;
+    bool wrong_addr_ok = bus.read(&bus, 0x68, 0x00, &junk, 1);
+    CHECK(!wrong_addr_ok, "reading the wrong address correctly fails");
+
+    /* multi-byte read across several registers */
+    fake.registers[0x04] = 0x11;
+    fake.registers[0x05] = 0x22;
+    fake.registers[0x06] = 0x33;
+
+    uint8_t multi[3] = {0, 0, 0};
+    ok = bus.read(&bus, 0x77, 0x04, multi, 3);
+    CHECK(ok, "multi-byte read succeeds");
+    CHECK(multi[0] == 0x11 && multi[1] == 0x22 && multi[2] == 0x33,
+          "multi-byte read returns bytes in the right order");
+
+    /* writing through the interface should change what a later read sees */
+    uint8_t to_write = 0x99;
+    ok = bus.write(&bus, 0x77, 0x10, &to_write, 1);
+    CHECK(ok, "write call reports success");
+    CHECK(fake.registers[0x10] == 0x99, "write actually changed the underlying register");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -490,6 +532,7 @@ int main(void)
     test_log_write_and_read_back();
     test_log_next_path_skips_existing();
     test_flight_init_auto_does_not_overwrite();
+    test_fake_i2c_bus_read_write();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
