@@ -531,6 +531,43 @@ static void test_bmp388_check_id(void)
     CHECK(!prg_bmp388_check_id(&bus), "wrong chip ID is correctly rejected");
 }
 
+static void test_bmp388_read_raw(void)
+{
+    printf("test: BMP388 raw pressure/temperature read\n");
+
+    prg_i2c_fake_t fake;
+    prg_i2c_fake_init(&fake, PRG_BMP388_ADDR);
+    prg_i2c_bus_t bus = prg_i2c_fake_as_bus(&fake);
+
+    /* pressure bytes, low to high: 0x01, 0x02, 0x03 */
+    fake.registers[PRG_BMP388_REG_DATA + 0] = 0x01;
+    fake.registers[PRG_BMP388_REG_DATA + 1] = 0x02;
+    fake.registers[PRG_BMP388_REG_DATA + 2] = 0x03;
+
+    /* temperature bytes, low to high: 0xAA, 0xBB, 0xCC */
+    fake.registers[PRG_BMP388_REG_DATA + 3] = 0xAA;
+    fake.registers[PRG_BMP388_REG_DATA + 4] = 0xBB;
+    fake.registers[PRG_BMP388_REG_DATA + 5] = 0xCC;
+
+    prg_bmp388_raw_t raw;
+    bool ok = prg_bmp388_read_raw(&bus, &raw);
+
+    CHECK(ok, "raw read succeeds");
+
+    uint32_t expected_pressure = 0x030201u;
+    uint32_t expected_temp     = 0xCCBBAAu;
+
+    printf("        pressure: got 0x%06X, expected 0x%06X\n",
+           raw.raw_pressure, expected_pressure);
+    printf("        temperature: got 0x%06X, expected 0x%06X\n",
+           raw.raw_temperature, expected_temp);
+
+    CHECK(raw.raw_pressure == expected_pressure,
+          "pressure bytes combined in the correct order");
+    CHECK(raw.raw_temperature == expected_temp,
+          "temperature bytes combined in the correct order");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -550,6 +587,7 @@ int main(void)
     test_flight_init_auto_does_not_overwrite();
     test_fake_i2c_bus_read_write();
     test_bmp388_check_id();
+    test_bmp388_read_raw();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
