@@ -4,6 +4,7 @@
 #include "perigee/state.h"
 #include "perigee/log.h"
 #include "i2c_fake.h"
+#include "perigee/bmp388.h"
 #include <stdio.h>
 #include <math.h>
 #include <unistd.h>
@@ -515,6 +516,21 @@ static void test_fake_i2c_bus_read_write(void)
     CHECK(fake.registers[0x10] == 0x99, "write actually changed the underlying register");
 }
 
+static void test_bmp388_check_id(void)
+{
+    printf("test: BMP388 chip ID check\n");
+
+    prg_i2c_fake_t fake;
+    prg_i2c_fake_init(&fake, PRG_BMP388_ADDR);
+    prg_i2c_bus_t bus = prg_i2c_fake_as_bus(&fake);
+
+    fake.registers[PRG_BMP388_REG_CHIP_ID] = PRG_BMP388_CHIP_ID_VAL;
+    CHECK(prg_bmp388_check_id(&bus), "genuine chip ID is accepted");
+
+    fake.registers[PRG_BMP388_REG_CHIP_ID] = 0xFF;
+    CHECK(!prg_bmp388_check_id(&bus), "wrong chip ID is correctly rejected");
+}
+
 int main(void)
 {
     printf("\nPerigee host tests\n==================\n\n");
@@ -533,6 +549,7 @@ int main(void)
     test_log_next_path_skips_existing();
     test_flight_init_auto_does_not_overwrite();
     test_fake_i2c_bus_read_write();
+    test_bmp388_check_id();
     printf("\n%s (%d failures)\n\n",
            failures ? "FAILED" : "ALL PASSED", failures);
 
