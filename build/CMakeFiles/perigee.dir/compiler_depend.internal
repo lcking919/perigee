@@ -58,6 +58,7 @@ CMakeFiles/perigee.dir/app/main.c.o
  /home/lking/projects/perigee/build/generated/pico_base/pico/version.h
  /home/lking/projects/perigee/core/include/perigee/i2c_bus.h
  /home/lking/projects/perigee/drivers/include/perigee/bmp388.h
+ /home/lking/projects/perigee/drivers/include/perigee/mpu6050.h
  /home/lking/projects/perigee/hal/pico/i2c_pico.h
  /usr/include/newlib/_ansi.h
  /usr/include/newlib/_newlib_version.h
@@ -90,6 +91,14 @@ CMakeFiles/perigee.dir/drivers/src/bmp388.c.o
  /home/lking/projects/perigee/drivers/src/bmp388.c
  /home/lking/projects/perigee/core/include/perigee/i2c_bus.h
  /home/lking/projects/perigee/drivers/include/perigee/bmp388.h
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h
+
+CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o
+ /home/lking/projects/perigee/drivers/src/mpu6050.c
+ /home/lking/projects/perigee/core/include/perigee/i2c_bus.h
+ /home/lking/projects/perigee/drivers/include/perigee/mpu6050.h
  /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h
  /usr/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h
  /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h

@@ -69,4 +69,5 @@ CMakeFiles/perigee.dir/app/main.c.o: \
  /home/lking/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/i2c.h \
  /home/lking/projects/perigee/hal/pico/i2c_pico.h \
  /home/lking/projects/perigee/core/include/perigee/i2c_bus.h \
- /home/lking/projects/perigee/drivers/include/perigee/bmp388.h
+ /home/lking/projects/perigee/drivers/include/perigee/bmp388.h \
+ /home/lking/projects/perigee/drivers/include/perigee/mpu6050.h

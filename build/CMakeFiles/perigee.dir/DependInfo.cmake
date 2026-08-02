@@ -166,6 +166,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lking/projects/perigee/app/main.c" "CMakeFiles/perigee.dir/app/main.c.o" "gcc" "CMakeFiles/perigee.dir/app/main.c.o.d"
   "/home/lking/projects/perigee/core/src/apogee.c" "CMakeFiles/perigee.dir/core/src/apogee.c.o" "gcc" "CMakeFiles/perigee.dir/core/src/apogee.c.o.d"
   "/home/lking/projects/perigee/drivers/src/bmp388.c" "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o" "gcc" "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o.d"
+  "/home/lking/projects/perigee/drivers/src/mpu6050.c" "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o" "gcc" "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o.d"
   "/home/lking/projects/perigee/hal/pico/i2c_pico.c" "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o" "gcc" "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o.d"
   "/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d"
   "/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d"

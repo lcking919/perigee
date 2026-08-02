@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/perigee.dir/core/src/apogee.c.o.d"
   "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o"
   "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o.d"
+  "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o"
+  "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o.d"
   "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o"
   "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o.d"
   "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o"

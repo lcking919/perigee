@@ -279,6 +279,30 @@ drivers/src/bmp388.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/bmp388.c.s
 .PHONY : drivers/src/bmp388.c.s
 
+drivers/src/mpu6050.o: drivers/src/mpu6050.c.o
+.PHONY : drivers/src/mpu6050.o
+
+# target to build an object file
+drivers/src/mpu6050.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o
+.PHONY : drivers/src/mpu6050.c.o
+
+drivers/src/mpu6050.i: drivers/src/mpu6050.c.i
+.PHONY : drivers/src/mpu6050.i
+
+# target to preprocess a source file
+drivers/src/mpu6050.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/mpu6050.c.i
+.PHONY : drivers/src/mpu6050.c.i
+
+drivers/src/mpu6050.s: drivers/src/mpu6050.c.s
+.PHONY : drivers/src/mpu6050.s
+
+# target to generate assembly for a file
+drivers/src/mpu6050.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/mpu6050.c.s
+.PHONY : drivers/src/mpu6050.c.s
+
 hal/pico/i2c_pico.o: hal/pico/i2c_pico.c.o
 .PHONY : hal/pico/i2c_pico.o
 
@@ -2191,6 +2215,9 @@ help:
 	@echo "... drivers/src/bmp388.o"
 	@echo "... drivers/src/bmp388.i"
 	@echo "... drivers/src/bmp388.s"
+	@echo "... drivers/src/mpu6050.o"
+	@echo "... drivers/src/mpu6050.i"
+	@echo "... drivers/src/mpu6050.s"
 	@echo "... hal/pico/i2c_pico.o"
 	@echo "... hal/pico/i2c_pico.i"
 	@echo "... hal/pico/i2c_pico.s"
