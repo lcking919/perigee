@@ -79,3 +79,63 @@ bool prg_bmp388_read_calib(prg_i2c_bus_t *bus, prg_bmp388_calib_t *calib)
 
     return true;
 }
+
+double prg_bmp388_compensate_temperature(uint32_t raw_temp, prg_bmp388_calib_t *calib)
+{
+    double partial_data1 = (double)raw_temp - calib->par_t1;
+    double partial_data2 = partial_data1 * calib->par_t2;
+
+    calib->t_lin = partial_data2 + (partial_data1 * partial_data1) * calib->par_t3;
+
+    if (calib->t_lin < PRG_BMP388_MIN_TEMP_C) {
+        calib->t_lin = PRG_BMP388_MIN_TEMP_C;
+    }
+    if (calib->t_lin > PRG_BMP388_MAX_TEMP_C) {
+        calib->t_lin = PRG_BMP388_MAX_TEMP_C;
+    }
+
+    return calib->t_lin;
+}
+
+static double bmp388_pow(double base, uint8_t power)
+{
+    double result = 1.0;
+    for (uint8_t i = 0; i < power; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+double prg_bmp388_compensate_pressure(uint32_t raw_pressure, const prg_bmp388_calib_t *calib)
+{
+    double partial_data1, partial_data2, partial_data3, partial_data4;
+    double partial_out1, partial_out2;
+    double comp_press;
+
+    partial_data1 = calib->par_p6 * calib->t_lin;
+    partial_data2 = calib->par_p7 * bmp388_pow(calib->t_lin, 2);
+    partial_data3 = calib->par_p8 * bmp388_pow(calib->t_lin, 3);
+    partial_out1  = calib->par_p5 + partial_data1 + partial_data2 + partial_data3;
+
+    partial_data1 = calib->par_p2 * calib->t_lin;
+    partial_data2 = calib->par_p3 * bmp388_pow(calib->t_lin, 2);
+    partial_data3 = calib->par_p4 * bmp388_pow(calib->t_lin, 3);
+    partial_out2  = (double)raw_pressure *
+                    (calib->par_p1 + partial_data1 + partial_data2 + partial_data3);
+
+    partial_data1 = bmp388_pow((double)raw_pressure, 2);
+    partial_data2 = calib->par_p9 + calib->par_p10 * calib->t_lin;
+    partial_data3 = partial_data1 * partial_data2;
+    partial_data4 = partial_data3 + bmp388_pow((double)raw_pressure, 3) * calib->par_p11;
+
+    comp_press = partial_out1 + partial_out2 + partial_data4;
+
+    if (comp_press < PRG_BMP388_MIN_PRES_PA) {
+        comp_press = PRG_BMP388_MIN_PRES_PA;
+    }
+    if (comp_press > PRG_BMP388_MAX_PRES_PA) {
+        comp_press = PRG_BMP388_MAX_PRES_PA;
+    }
+
+    return comp_press;
+}

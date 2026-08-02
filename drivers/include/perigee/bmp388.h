@@ -32,4 +32,7 @@ bool prg_bmp388_read_calib(prg_i2c_bus_t *bus, prg_bmp388_calib_t *calib);
 bool prg_bmp388_read_raw(prg_i2c_bus_t *bus, prg_bmp388_raw_t *out);
 bool prg_bmp388_check_id(prg_i2c_bus_t *bus);
 
+double prg_bmp388_compensate_temperature(uint32_t raw_temp, prg_bmp388_calib_t *calib);
+double prg_bmp388_compensate_pressure(uint32_t raw_pressure, const prg_bmp388_calib_t *calib);
+
 #endif
