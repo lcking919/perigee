@@ -1,0 +1,104 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:16 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/lking/.opencode/bin/"
+      - "/home/lking/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli/"
+      - "/home/lking/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/games/"
+      - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/mnt/c/Program Files/Oculus/Support/oculus-runtime/"
+      - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/Windows/system32/"
+      - "/mnt/c/Windows/"
+      - "/mnt/c/Windows/System32/Wbem/"
+      - "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/Windows/System32/OpenSSH/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files/Docker/Docker/resources/bin/"
+      - "/mnt/c/Users/lckin/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/lckin/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/home/lking/.opencode/bin/uname"
+      - "/home/lking/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli/uname"
+      - "/home/lking/.local/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/home/lking/.opencode/bin"
+        - "/home/lking/.opencode/bin"
+        - "/home/lking/.vscode-server/bin/e4c7e7b1d6d060162f4aa7f8225271b67ce1df75/bin/remote-cli"
+        - "/home/lking/.local/bin"
+        - "/home/lking/.opencode/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/mnt/c/Program Files/Oculus/Support/oculus-runtime"
+        - "/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common"
+        - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path"
+        - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/Windows/system32"
+        - "/mnt/c/Windows"
+        - "/mnt/c/Windows/System32/Wbem"
+        - "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/Windows/System32/OpenSSH/"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files/Docker/Docker/resources/bin"
+        - "/mnt/c/Users/lckin/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/lckin/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/snap/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      The system is: Linux - 6.18.33.1-microsoft-standard-WSL2 - x86_64
+...

@@ -1,0 +1,64 @@
+CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: \
+ /home/lking/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c \
+ /home/lking/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h \
+ /home/lking/pico-sdk/src/common/pico_base_headers/include/pico.h \
+ /home/lking/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+ /home/lking/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdbool.h \
+ /usr/include/newlib/assert.h /usr/include/newlib/_ansi.h \
+ /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
+ /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
+ /usr/include/newlib/sys/features.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdint.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h \
+ /home/lking/projects/perigee/build/generated/pico_base/pico/version.h \
+ /home/lking/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+ /home/lking/projects/perigee/build/generated/pico_base/pico/config_autogen.h \
+ /home/lking/pico-sdk/src/boards/include/boards/pico.h \
+ /home/lking/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+ /home/lking/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+ /home/lking/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+ /usr/include/newlib/sys/cdefs.h \
+ /usr/include/newlib/machine/_default_types.h \
+ /home/lking/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+ /home/lking/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+ /home/lking/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+ /home/lking/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+ /home/lking/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+ /home/lking/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+ /usr/lib/gcc/arm-none-eabi/14.2.1/include/stdarg.h \
+ /home/lking/pico-sdk/src/common/pico_time/include/pico/time.h \
+ /home/lking/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
+ /home/lking/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+ /home/lking/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pads_bank0.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/io_bank0.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h \
+ /home/lking/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h \
+ /home/lking/pico-sdk/src/rp2040/pico_platform/include/pico/platform/cpu_regs.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/m0plus.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/systick.h \
+ /home/lking/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
+ /home/lking/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/resets.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
+ /home/lking/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+ /home/lking/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/lking/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
+ /home/lking/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
+ /home/lking/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
+ /home/lking/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h
