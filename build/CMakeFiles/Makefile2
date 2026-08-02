@@ -65,21 +65,44 @@ CMAKE_BINARY_DIR = /home/lking/projects/perigee/build
 # The main recursive "all" target.
 all: CMakeFiles/perigee.dir/all
 all: pico-sdk/all
+all: lib/littlefs-lib/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/perigee.dir/codegen
 codegen: pico-sdk/codegen
+codegen: lib/littlefs-lib/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: pico-sdk/preinstall
+preinstall: lib/littlefs-lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/perigee.dir/clean
 clean: pico-sdk/clean
+clean: lib/littlefs-lib/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory lib/littlefs-lib
+
+# Recursive "all" directory target.
+lib/littlefs-lib/all:
+.PHONY : lib/littlefs-lib/all
+
+# Recursive "codegen" directory target.
+lib/littlefs-lib/codegen:
+.PHONY : lib/littlefs-lib/codegen
+
+# Recursive "preinstall" directory target.
+lib/littlefs-lib/preinstall:
+.PHONY : lib/littlefs-lib/preinstall
+
+# Recursive "clean" directory target.
+lib/littlefs-lib/clean:
+.PHONY : lib/littlefs-lib/clean
 
 #=============================================================================
 # Directory level rules for directory pico-sdk

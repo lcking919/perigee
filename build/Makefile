@@ -327,6 +327,30 @@ hal/pico/i2c_pico.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.s
 .PHONY : hal/pico/i2c_pico.c.s
 
+hal/pico/log_pico.o: hal/pico/log_pico.c.o
+.PHONY : hal/pico/log_pico.o
+
+# target to build an object file
+hal/pico/log_pico.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/hal/pico/log_pico.c.o
+.PHONY : hal/pico/log_pico.c.o
+
+hal/pico/log_pico.i: hal/pico/log_pico.c.i
+.PHONY : hal/pico/log_pico.i
+
+# target to preprocess a source file
+hal/pico/log_pico.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/hal/pico/log_pico.c.i
+.PHONY : hal/pico/log_pico.c.i
+
+hal/pico/log_pico.s: hal/pico/log_pico.c.s
+.PHONY : hal/pico/log_pico.s
+
+# target to generate assembly for a file
+hal/pico/log_pico.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/hal/pico/log_pico.c.s
+.PHONY : hal/pico/log_pico.c.s
+
 home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
@@ -2191,6 +2215,54 @@ home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.s
 .PHONY : home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.s
 
+lib/littlefs-lib/lfs.o: lib/littlefs-lib/lfs.c.o
+.PHONY : lib/littlefs-lib/lfs.o
+
+# target to build an object file
+lib/littlefs-lib/lfs.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/lib/littlefs-lib/lfs.c.o
+.PHONY : lib/littlefs-lib/lfs.c.o
+
+lib/littlefs-lib/lfs.i: lib/littlefs-lib/lfs.c.i
+.PHONY : lib/littlefs-lib/lfs.i
+
+# target to preprocess a source file
+lib/littlefs-lib/lfs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/lib/littlefs-lib/lfs.c.i
+.PHONY : lib/littlefs-lib/lfs.c.i
+
+lib/littlefs-lib/lfs.s: lib/littlefs-lib/lfs.c.s
+.PHONY : lib/littlefs-lib/lfs.s
+
+# target to generate assembly for a file
+lib/littlefs-lib/lfs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/lib/littlefs-lib/lfs.c.s
+.PHONY : lib/littlefs-lib/lfs.c.s
+
+lib/littlefs-lib/pico_hal.o: lib/littlefs-lib/pico_hal.c.o
+.PHONY : lib/littlefs-lib/pico_hal.o
+
+# target to build an object file
+lib/littlefs-lib/pico_hal.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.o
+.PHONY : lib/littlefs-lib/pico_hal.c.o
+
+lib/littlefs-lib/pico_hal.i: lib/littlefs-lib/pico_hal.c.i
+.PHONY : lib/littlefs-lib/pico_hal.i
+
+# target to preprocess a source file
+lib/littlefs-lib/pico_hal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.i
+.PHONY : lib/littlefs-lib/pico_hal.c.i
+
+lib/littlefs-lib/pico_hal.s: lib/littlefs-lib/pico_hal.c.s
+.PHONY : lib/littlefs-lib/pico_hal.s
+
+# target to generate assembly for a file
+lib/littlefs-lib/pico_hal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.s
+.PHONY : lib/littlefs-lib/pico_hal.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2221,6 +2293,9 @@ help:
 	@echo "... hal/pico/i2c_pico.o"
 	@echo "... hal/pico/i2c_pico.i"
 	@echo "... hal/pico/i2c_pico.s"
+	@echo "... hal/pico/log_pico.o"
+	@echo "... hal/pico/log_pico.i"
+	@echo "... hal/pico/log_pico.s"
 	@echo "... home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2454,6 +2529,12 @@ help:
 	@echo "... home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.o"
 	@echo "... home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.i"
 	@echo "... home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.s"
+	@echo "... lib/littlefs-lib/lfs.o"
+	@echo "... lib/littlefs-lib/lfs.i"
+	@echo "... lib/littlefs-lib/lfs.s"
+	@echo "... lib/littlefs-lib/pico_hal.o"
+	@echo "... lib/littlefs-lib/pico_hal.i"
+	@echo "... lib/littlefs-lib/pico_hal.s"
 .PHONY : help
 
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
+#include "pico_hal.h"
 
 #include "i2c_pico.h"
 #include "perigee/bmp388.h"
@@ -19,6 +20,12 @@ int main(void)
     sleep_ms(2000);
 
     printf("Perigee sensor driver test\n");
+
+    if (pico_mount(true) < 0) {
+        printf("FAIL: could not mount filesystem\n");
+        while (true) { sleep_ms(1000); }
+    }
+    printf("PASS: filesystem mounted\n");
 
     gpio_init(POWER_LED_PIN);
     gpio_set_dir(POWER_LED_PIN, GPIO_OUT);

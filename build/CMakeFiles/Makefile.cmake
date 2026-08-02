@@ -152,6 +152,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/picotool/picotoolTargets-release.cmake"
   "_deps/picotool/picotoolTargets.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/pioasmBuild-mkdirs.cmake"
+  "/home/lking/projects/perigee/lib/littlefs-lib/CMakeLists.txt"
   "/usr/share/cmake-4.2/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake"
@@ -315,6 +316,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2_common/pico_stdio/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/littlefs-lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

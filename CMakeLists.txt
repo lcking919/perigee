@@ -8,12 +8,15 @@ set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
+add_subdirectory(lib/littlefs-lib)
+
 add_executable(perigee
     app/main.c
     core/src/apogee.c
     drivers/src/bmp388.c
     drivers/src/mpu6050.c
     hal/pico/i2c_pico.c
+    hal/pico/log_pico.c
 )
 
 target_include_directories(perigee PRIVATE
@@ -25,6 +28,7 @@ target_include_directories(perigee PRIVATE
 target_link_libraries(perigee
     pico_stdlib
     hardware_i2c
+    littlefs-lib
 )
 
 pico_enable_stdio_usb(perigee 1)

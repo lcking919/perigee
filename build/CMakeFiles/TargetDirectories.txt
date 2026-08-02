@@ -221,3 +221,5 @@
 /home/lking/projects/perigee/build/pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/rebuild_cache.dir
 /home/lking/projects/perigee/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/lking/projects/perigee/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
+/home/lking/projects/perigee/build/lib/littlefs-lib/CMakeFiles/edit_cache.dir
+/home/lking/projects/perigee/build/lib/littlefs-lib/CMakeFiles/rebuild_cache.dir

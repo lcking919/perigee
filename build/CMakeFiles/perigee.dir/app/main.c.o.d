@@ -67,6 +67,14 @@ CMakeFiles/perigee.dir/app/main.c.o: \
  /home/lking/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
  /home/lking/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/i2c.h \
  /home/lking/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/i2c.h \
+ /home/lking/projects/perigee/lib/littlefs-lib/pico_hal.h \
+ /home/lking/projects/perigee/lib/littlefs-lib/lfs.h \
+ /home/lking/projects/perigee/lib/littlefs-lib/lfs_util.h \
+ /usr/include/newlib/string.h /usr/include/newlib/sys/_locale.h \
+ /usr/include/newlib/strings.h /usr/include/newlib/sys/string.h \
+ /usr/include/newlib/inttypes.h /usr/include/newlib/sys/_intsup.h \
+ /usr/include/newlib/stdlib.h /usr/include/newlib/machine/stdlib.h \
+ /usr/include/newlib/alloca.h \
  /home/lking/projects/perigee/hal/pico/i2c_pico.h \
  /home/lking/projects/perigee/core/include/perigee/i2c_bus.h \
  /home/lking/projects/perigee/drivers/include/perigee/bmp388.h \

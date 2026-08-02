@@ -98,6 +98,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/lking/projects/perigee/hal/pico"
   "/home/lking/pico-sdk/src/rp2_common/pico_atomic/include"
   "/home/lking/pico-sdk/lib/tinyusb/src"
+  "/home/lking/projects/perigee/lib/littlefs-lib"
   "/home/lking/pico-sdk/src/common/pico_stdlib_headers/include"
   "/home/lking/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/lking/pico-sdk/src/common/pico_base_headers/include"
@@ -168,6 +169,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lking/projects/perigee/drivers/src/bmp388.c" "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o" "gcc" "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o.d"
   "/home/lking/projects/perigee/drivers/src/mpu6050.c" "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o" "gcc" "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o.d"
   "/home/lking/projects/perigee/hal/pico/i2c_pico.c" "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o" "gcc" "CMakeFiles/perigee.dir/hal/pico/i2c_pico.c.o.d"
+  "/home/lking/projects/perigee/hal/pico/log_pico.c" "CMakeFiles/perigee.dir/hal/pico/log_pico.c.o" "gcc" "CMakeFiles/perigee.dir/hal/pico/log_pico.c.o.d"
   "/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o.d"
   "/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o.d"
   "/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o.d"
@@ -241,6 +243,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o.d"
   "/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d"
   "/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o.d"
+  "/home/lking/projects/perigee/lib/littlefs-lib/lfs.c" "CMakeFiles/perigee.dir/lib/littlefs-lib/lfs.c.o" "gcc" "CMakeFiles/perigee.dir/lib/littlefs-lib/lfs.c.o.d"
+  "/home/lking/projects/perigee/lib/littlefs-lib/pico_hal.c" "CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.o" "gcc" "CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.o.d"
   "/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "CMakeFiles/perigee.dir/home/lking/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   )
 

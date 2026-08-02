@@ -108,7 +108,8 @@
 		"/home/lking/projects/perigee/build/pico-sdk/src/rp2_common/pico_runtime/cmake_install.cmake",
 		"/home/lking/projects/perigee/build/pico-sdk/src/rp2_common/pico_stdio/cmake_install.cmake",
 		"/home/lking/projects/perigee/build/pico-sdk/src/rp2_common/pico_stdlib/cmake_install.cmake",
-		"/home/lking/projects/perigee/build/pico-sdk/docs/cmake_install.cmake"
+		"/home/lking/projects/perigee/build/pico-sdk/docs/cmake_install.cmake",
+		"/home/lking/projects/perigee/build/lib/littlefs-lib/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
