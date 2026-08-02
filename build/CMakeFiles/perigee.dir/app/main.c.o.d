@@ -79,5 +79,6 @@ CMakeFiles/perigee.dir/app/main.c.o: \
  /home/lking/projects/perigee/core/include/perigee/i2c_bus.h \
  /home/lking/projects/perigee/drivers/include/perigee/bmp388.h \
  /home/lking/projects/perigee/drivers/include/perigee/mpu6050.h \
+ /home/lking/projects/perigee/drivers/include/perigee/adxl375.h \
  /home/lking/projects/perigee/core/include/perigee/log.h \
  /home/lking/projects/perigee/core/include/perigee/sample.h

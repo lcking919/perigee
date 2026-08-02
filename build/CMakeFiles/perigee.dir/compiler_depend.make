@@ -58,6 +58,7 @@ CMakeFiles/perigee.dir/app/main.c.o: /home/lking/projects/perigee/app/main.c \
   /home/lking/projects/perigee/core/include/perigee/i2c_bus.h \
   /home/lking/projects/perigee/core/include/perigee/log.h \
   /home/lking/projects/perigee/core/include/perigee/sample.h \
+  /home/lking/projects/perigee/drivers/include/perigee/adxl375.h \
   /home/lking/projects/perigee/drivers/include/perigee/bmp388.h \
   /home/lking/projects/perigee/drivers/include/perigee/mpu6050.h \
   /home/lking/projects/perigee/hal/pico/i2c_pico.h \
@@ -4014,9 +4015,7 @@ CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.o: /home/lking/projects/perig
 
 /usr/include/newlib/c++/14.2.1/bits/std_abs.h:
 
-/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c:
-
-/home/lking/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/usb_dpram.h:
+/usr/include/newlib/c++/14.2.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h:
 
 /home/lking/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c:
 
@@ -4132,7 +4131,11 @@ CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.o: /home/lking/projects/perig
 
 /usr/include/newlib/sys/timespec.h:
 
-/usr/include/newlib/c++/14.2.1/arm-none-eabi/thumb/v8-m.main+fp/softfp/bits/cpu_defines.h:
+/home/lking/pico-sdk/src/rp2_common/pico_thread_local/include/picotls.h:
+
+/home/lking/pico-sdk/src/common/pico_sync/include/pico/critical_section.h:
+
+/home/lking/projects/perigee/drivers/include/perigee/mpu6050.h:
 
 /home/lking/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h:
 
@@ -4166,23 +4169,19 @@ CMakeFiles/perigee.dir/lib/littlefs-lib/pico_hal.c.o: /home/lking/projects/perig
 
 generated/pico_base/pico/version.h:
 
+/usr/include/newlib/sys/_stdint.h:
+
+/home/lking/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:
+
 /home/lking/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/io_bank0.h:
 
 /home/lking/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c:
 
 /home/lking/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/bootram.h:
 
-/usr/include/newlib/sys/_stdint.h:
-
-/home/lking/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h:
-
 /usr/include/newlib/sys/string.h:
 
 /home/lking/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot_constants.h:
-
-/usr/include/newlib/time.h:
-
-/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:
 
 /home/lking/pico-sdk/src/rp2_common/pico_time_adapter/include/pico/time_adapter.h:
 
@@ -4239,8 +4238,6 @@ generated/pico_base/pico/version.h:
 /home/lking/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/m33.h:
 
 /home/lking/pico-sdk/src/rp2_common/pico_printf/include/pico/printf.h:
-
-/home/lking/projects/perigee/drivers/include/perigee/mpu6050.h:
 
 /home/lking/pico-sdk/src/common/pico_util/include/pico/util/datetime.h:
 
@@ -4356,9 +4353,13 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/lking/pico-sdk/src/common/pico_stdlib_headers/include/pico/stdlib.h:
 
-/home/lking/pico-sdk/src/rp2_common/pico_thread_local/include/picotls.h:
+/home/lking/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c:
 
-/home/lking/pico-sdk/src/common/pico_sync/include/pico/critical_section.h:
+/home/lking/pico-sdk/src/rp2350/hardware_structs/include/hardware/structs/usb_dpram.h:
+
+/home/lking/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:
+
+/usr/include/newlib/time.h:
 
 /home/lking/pico-sdk/src/common/pico_sync/critical_section.c:
 
@@ -4531,6 +4532,8 @@ generated/pico_base/pico/config_autogen.h:
 /home/lking/pico-sdk/src/rp2350/hardware_regs/include/hardware/regs/xosc.h:
 
 /usr/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h:
+
+/home/lking/projects/perigee/drivers/include/perigee/adxl375.h:
 
 /home/lking/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
 

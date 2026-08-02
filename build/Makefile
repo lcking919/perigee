@@ -255,6 +255,30 @@ core/src/apogee.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/core/src/apogee.c.s
 .PHONY : core/src/apogee.c.s
 
+drivers/src/adxl375.o: drivers/src/adxl375.c.o
+.PHONY : drivers/src/adxl375.o
+
+# target to build an object file
+drivers/src/adxl375.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/adxl375.c.o
+.PHONY : drivers/src/adxl375.c.o
+
+drivers/src/adxl375.i: drivers/src/adxl375.c.i
+.PHONY : drivers/src/adxl375.i
+
+# target to preprocess a source file
+drivers/src/adxl375.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/adxl375.c.i
+.PHONY : drivers/src/adxl375.c.i
+
+drivers/src/adxl375.s: drivers/src/adxl375.c.s
+.PHONY : drivers/src/adxl375.s
+
+# target to generate assembly for a file
+drivers/src/adxl375.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perigee.dir/build.make CMakeFiles/perigee.dir/drivers/src/adxl375.c.s
+.PHONY : drivers/src/adxl375.c.s
+
 drivers/src/bmp388.o: drivers/src/bmp388.c.o
 .PHONY : drivers/src/bmp388.o
 
@@ -2284,6 +2308,9 @@ help:
 	@echo "... core/src/apogee.o"
 	@echo "... core/src/apogee.i"
 	@echo "... core/src/apogee.s"
+	@echo "... drivers/src/adxl375.o"
+	@echo "... drivers/src/adxl375.i"
+	@echo "... drivers/src/adxl375.s"
 	@echo "... drivers/src/bmp388.o"
 	@echo "... drivers/src/bmp388.i"
 	@echo "... drivers/src/bmp388.s"

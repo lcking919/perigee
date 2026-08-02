@@ -15,6 +15,7 @@ add_executable(perigee
     core/src/apogee.c
     drivers/src/bmp388.c
     drivers/src/mpu6050.c
+    drivers/src/adxl375.c
     hal/pico/i2c_pico.c
     hal/pico/log_pico.c
 )

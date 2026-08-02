@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include "pico/time.h"
 #include "hardware/i2c.h"
 #include "pico_hal.h"
-#include "pico/time.h"
+
 #include "i2c_pico.h"
 #include "perigee/bmp388.h"
 #include "perigee/mpu6050.h"
+#include "perigee/adxl375.h"
 #include "perigee/log.h"
 
 #define I2C_SDA_PIN 4
@@ -81,6 +83,18 @@ int main(void)
     }
     printf("PASS: MPU6050 awake\n");
 
+    if (!prg_adxl375_check_id(&bus)) {
+        printf("FAIL: ADXL375 chip ID check failed - check wiring\n");
+        while (true) { sleep_ms(1000); }
+    }
+    printf("PASS: ADXL375 chip ID confirmed\n");
+
+    if (!prg_adxl375_enable(&bus)) {
+        printf("FAIL: could not enable ADXL375\n");
+        while (true) { sleep_ms(1000); }
+    }
+    printf("PASS: ADXL375 enabled\n");
+
     void *log_handle = NULL;
     bool have_log = false;
 
@@ -109,6 +123,7 @@ int main(void)
                     have_log = false;
                 }
                 printf("STOPPED - logging paused, file closed\n");
+
                 void *read_handle;
                 if (prg_log_open_read(&read_handle, "flight_test.bin")) {
                     printf("--- reading back flight_test.bin ---\n");
@@ -150,10 +165,20 @@ int main(void)
             prg_mpu6050_data_t mpu_data;
             prg_mpu6050_convert(&mpu_raw, &mpu_data);
 
-            printf("BMP388 - temp: %.2f C  pressure: %.2f Pa   |   MPU6050 - accel: %.2f %.2f %.2f g  gyro: %.1f %.1f %.1f dps\n",
+            prg_adxl375_raw_t adxl_raw;
+            if (!prg_adxl375_read_raw(&bus, &adxl_raw)) {
+                printf("ADXL375 read failed\n");
+                sleep_ms(1000);
+                continue;
+            }
+            prg_adxl375_data_t adxl_data;
+            prg_adxl375_convert(&adxl_raw, &adxl_data);
+
+            printf("BMP388 - temp: %.2f C  pressure: %.2f Pa   |   MPU6050 - accel: %.2f %.2f %.2f g  gyro: %.1f %.1f %.1f dps   |   ADXL375 - %.2f %.2f %.2f g\n",
                    temp_c, press_pa,
                    mpu_data.accel_x_g, mpu_data.accel_y_g, mpu_data.accel_z_g,
-                   mpu_data.gyro_x_dps, mpu_data.gyro_y_dps, mpu_data.gyro_z_dps);
+                   mpu_data.gyro_x_dps, mpu_data.gyro_y_dps, mpu_data.gyro_z_dps,
+                   adxl_data.x_g, adxl_data.y_g, adxl_data.z_g);
 
             if (have_log) {
                 prg_log_record_t rec;

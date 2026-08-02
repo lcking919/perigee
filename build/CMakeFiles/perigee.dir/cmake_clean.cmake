@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/perigee.dir/app/main.c.o.d"
   "CMakeFiles/perigee.dir/core/src/apogee.c.o"
   "CMakeFiles/perigee.dir/core/src/apogee.c.o.d"
+  "CMakeFiles/perigee.dir/drivers/src/adxl375.c.o"
+  "CMakeFiles/perigee.dir/drivers/src/adxl375.c.o.d"
   "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o"
   "CMakeFiles/perigee.dir/drivers/src/bmp388.c.o.d"
   "CMakeFiles/perigee.dir/drivers/src/mpu6050.c.o"
