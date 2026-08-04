@@ -11,6 +11,7 @@
 #include "perigee/adxl375.h"
 #include "perigee/log.h"
 #include "perigee/raw_log.h"
+#include <math.h>
 
 #define I2C_SDA_PIN 4
 #define I2C_SCL_PIN 5
@@ -28,6 +29,11 @@ DWORD get_fattime(void)
          | ((DWORD)0 << 11)
          | ((DWORD)0 << 5)
          | ((DWORD)0 >> 1);
+}
+
+static double compute_altitude_m(double current_pressure_pa, double reference_pressure_pa)
+{
+    return 44330.0 * (1.0 - pow(current_pressure_pa / reference_pressure_pa, 0.1903));
 }
 
 int main(void)
@@ -135,6 +141,8 @@ int main(void)
     bool have_log = false;
     char current_log_path[64] = "";
     void *raw_log_handle = NULL;
+    double ground_pressure_pa = 0.0;
+    bool have_ground_pressure = false;
 
     printf("Press the arm button to start/stop logging (GP%d)...\n", ARM_BUTTON_PIN);
 
@@ -180,6 +188,27 @@ int main(void)
                 logging = !logging;
 
                 if (logging) {
+                    double sum = 0.0;
+                    int good_samples = 0;
+                    for (int i = 0; i < 20; i++) {
+                        prg_bmp388_raw_t ref_raw;
+                        if (prg_bmp388_read_raw(&bus, &ref_raw)) {
+                            prg_bmp388_compensate_temperature(ref_raw.raw_temperature, &calib);
+                            sum += prg_bmp388_compensate_pressure(ref_raw.raw_pressure, &calib);
+                            good_samples++;
+                        }
+                        sleep_ms(20);
+                    }
+
+                    if (good_samples > 0) {
+                        ground_pressure_pa = sum / good_samples;
+                        have_ground_pressure = true;
+                        printf("Ground pressure captured (avg of %d): %.2f Pa\n", good_samples, ground_pressure_pa);
+                    } else {
+                        have_ground_pressure = false;
+                        printf("WARNING: could not capture ground pressure\n");
+                    }
+
                     if (prg_log_next_path(current_log_path, sizeof(current_log_path)) &&
                         prg_log_open(&log_handle, current_log_path)) {
                         have_log = true;
@@ -235,6 +264,11 @@ int main(void)
             double temp_c   = prg_bmp388_compensate_temperature(raw.raw_temperature, &calib);
             double press_pa = prg_bmp388_compensate_pressure(raw.raw_pressure, &calib);
 
+            double altitude_m = 0.0;
+            if (have_ground_pressure) {
+                altitude_m = compute_altitude_m(press_pa, ground_pressure_pa);
+            }
+
             prg_mpu6050_raw_t mpu_raw;
             if (!prg_mpu6050_read_raw(&bus, &mpu_raw)) {
                 printf("MPU6050 read failed\n");
@@ -275,8 +309,7 @@ int main(void)
             prg_adxl375_data_t adxl_data;
             prg_adxl375_convert(&adxl_raw, &adxl_data);
 
-            printf("BMP388 - temp: %.2f C  pressure: %.2f Pa   |   MPU6050 - accel: %.2f %.2f %.2f g  gyro: %.1f %.1f %.1f dps   |   ADXL375 - %.2f %.2f %.2f g\n",
-                   temp_c, press_pa,
+            printf("BMP388 - temp: %.2f C  pressure: %.2f Pa  alt: %.2f m   |   MPU6050 - accel: %.2f %.2f %.2f g  gyro: %.1f %.1f %.1f dps   |   ADXL375 - %.2f %.2f %.2f g\n",                   temp_c, press_pa, altitude_m,
                    mpu_data.accel_x_g, mpu_data.accel_y_g, mpu_data.accel_z_g,
                    mpu_data.gyro_x_dps, mpu_data.gyro_y_dps, mpu_data.gyro_z_dps,
                    adxl_data.x_g, adxl_data.y_g, adxl_data.z_g);
