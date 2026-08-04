@@ -2,7 +2,7 @@
 #include "pico/stdlib.h"
 #include "pico/time.h"
 #include "hardware/i2c.h"
-#include "pico_hal.h"
+#include "ff.h"
 
 #include "i2c_pico.h"
 #include "perigee/bmp388.h"
@@ -16,6 +16,17 @@
 #define ARM_BUTTON_PIN 8
 #define POWER_LED_PIN  14
 #define LOG_LED_PIN    15
+#define LONG_PRESS_MS  3000
+
+DWORD get_fattime(void)
+{
+    return ((DWORD)(2026 - 1980) << 25)
+         | ((DWORD)1 << 21)
+         | ((DWORD)1 << 16)
+         | ((DWORD)0 << 11)
+         | ((DWORD)0 << 5)
+         | ((DWORD)0 >> 1);
+}
 
 int main(void)
 {
@@ -24,11 +35,13 @@ int main(void)
 
     printf("Perigee sensor driver test\n");
 
-    if (pico_mount(true) < 0) {
-        printf("FAIL: could not mount filesystem\n");
+    FATFS fs;
+    FRESULT fr = f_mount(&fs, "0:", 1);
+    if (fr != FR_OK) {
+        printf("FAIL: could not mount SD card filesystem\n");
         while (true) { sleep_ms(1000); }
     }
-    printf("PASS: filesystem mounted\n");
+    printf("PASS: SD card filesystem mounted\n");
 
     gpio_init(POWER_LED_PIN);
     gpio_set_dir(POWER_LED_PIN, GPIO_OUT);
@@ -97,14 +110,14 @@ int main(void)
 
     void *log_handle = NULL;
     bool have_log = false;
+    char current_log_path[64] = "";
 
     printf("Press the arm button to start/stop logging (GP%d)...\n", ARM_BUTTON_PIN);
 
     bool logging = false;
     bool button_was_pressed = false;
     uint32_t press_start_ms = 0;
-    bool     long_press_fired = false;
-    #define LONG_PRESS_MS 3000
+    bool long_press_fired = false;
 
     while (true) {
         bool button_is_pressed = (gpio_get(ARM_BUTTON_PIN) == 0);
@@ -121,7 +134,8 @@ int main(void)
 
                 printf("=== LONG PRESS: dumping current log ===\n");
                 void *read_handle;
-                if (prg_log_open_read(&read_handle, "flight_test.bin")) {
+                if (current_log_path[0] != '\0' &&
+                    prg_log_open_read(&read_handle, current_log_path)) {
                     printf("t_ms,pressure_pa,accel_z_g\n");
                     prg_log_record_t rec;
                     int count = 0;
@@ -142,9 +156,10 @@ int main(void)
                 logging = !logging;
 
                 if (logging) {
-                    if (prg_log_open(&log_handle, "flight_test.bin")) {
+                    if (prg_log_next_path(current_log_path, sizeof(current_log_path)) &&
+                        prg_log_open(&log_handle, current_log_path)) {
                         have_log = true;
-                        printf("ARMED - logging started, writing to flight_test.bin\n");
+                        printf("ARMED - logging started, writing to %s\n", current_log_path);
                     } else {
                         printf("ARMED - logging started, but LOG FILE FAILED TO OPEN\n");
                         have_log = false;
@@ -161,7 +176,6 @@ int main(void)
             }
         }
 
-        button_was_pressed = button_is_pressed;
         button_was_pressed = button_is_pressed;
 
         if (logging) {
