@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "pico/stdlib.h"
 #include "pico/time.h"
 #include "hardware/i2c.h"
@@ -9,6 +10,7 @@
 #include "perigee/mpu6050.h"
 #include "perigee/adxl375.h"
 #include "perigee/log.h"
+#include "perigee/raw_log.h"
 
 #define I2C_SDA_PIN 4
 #define I2C_SCL_PIN 5
@@ -31,7 +33,10 @@ DWORD get_fattime(void)
 int main(void)
 {
     stdio_init_all();
-    sleep_ms(2000);
+    while (!stdio_usb_connected()) {
+        sleep_ms(100);
+    }
+    sleep_ms(500);
 
     printf("Perigee sensor driver test\n");
 
@@ -78,6 +83,24 @@ int main(void)
     }
     printf("PASS: BMP388 calibration data read\n");
 
+    char calib_path[64];
+    if (prg_log_next_path(calib_path, sizeof(calib_path))) {
+        size_t len = strlen(calib_path);
+        if (len > 4) {
+            calib_path[len - 4] = '\0';
+        }
+        strcat(calib_path, "_calib.bin");
+
+        void *calib_handle;
+        if (prg_log_open(&calib_handle, calib_path) &&
+            prg_log_write_blob(calib_handle, &calib, sizeof(calib))) {
+            printf("PASS: calibration snapshot saved to %s\n", calib_path);
+        } else {
+            printf("WARNING: could not save calibration snapshot\n");
+        }
+        prg_log_close(calib_handle);
+    }
+
     if (!prg_bmp388_enable(&bus)) {
         printf("FAIL: could not enable BMP388 normal power mode\n");
         while (true) { sleep_ms(1000); }
@@ -111,6 +134,7 @@ int main(void)
     void *log_handle = NULL;
     bool have_log = false;
     char current_log_path[64] = "";
+    void *raw_log_handle = NULL;
 
     printf("Press the arm button to start/stop logging (GP%d)...\n", ARM_BUTTON_PIN);
 
@@ -159,6 +183,20 @@ int main(void)
                     if (prg_log_next_path(current_log_path, sizeof(current_log_path)) &&
                         prg_log_open(&log_handle, current_log_path)) {
                         have_log = true;
+
+                        char raw_path[64];
+                        strcpy(raw_path, current_log_path);
+                        size_t rlen = strlen(raw_path);
+                        if (rlen > 4) {
+                            raw_path[rlen - 4] = '\0';
+                        }
+                        strcat(raw_path, "_raw.bin");
+
+                        if (!prg_log_open(&raw_log_handle, raw_path)) {
+                            printf("WARNING: raw log failed to open\n");
+                            raw_log_handle = NULL;
+                        }
+
                         printf("ARMED - logging started, writing to %s\n", current_log_path);
                     } else {
                         printf("ARMED - logging started, but LOG FILE FAILED TO OPEN\n");
@@ -167,6 +205,7 @@ int main(void)
                 } else {
                     if (have_log) {
                         prg_log_close(log_handle);
+                        prg_log_close(raw_log_handle);
                         have_log = false;
                     }
                     printf("STOPPED - logging paused, file closed\n");
@@ -186,6 +225,13 @@ int main(void)
                 continue;
             }
 
+            prg_raw_record_t rec_bmp;
+            rec_bmp.t_ms = to_ms_since_boot(get_absolute_time());
+            rec_bmp.sensor_id = PRG_SENSOR_BMP388;
+            rec_bmp.data.bmp388.raw_pressure = raw.raw_pressure;
+            rec_bmp.data.bmp388.raw_temperature = raw.raw_temperature;
+            prg_log_write_blob(raw_log_handle, &rec_bmp, sizeof(rec_bmp));
+
             double temp_c   = prg_bmp388_compensate_temperature(raw.raw_temperature, &calib);
             double press_pa = prg_bmp388_compensate_pressure(raw.raw_pressure, &calib);
 
@@ -195,6 +241,19 @@ int main(void)
                 sleep_ms(1000);
                 continue;
             }
+
+            prg_raw_record_t rec_mpu;
+            rec_mpu.t_ms = to_ms_since_boot(get_absolute_time());
+            rec_mpu.sensor_id = PRG_SENSOR_MPU6050;
+            rec_mpu.data.mpu6050.accel_x = mpu_raw.accel_x;
+            rec_mpu.data.mpu6050.accel_y = mpu_raw.accel_y;
+            rec_mpu.data.mpu6050.accel_z = mpu_raw.accel_z;
+            rec_mpu.data.mpu6050.temp_raw = mpu_raw.temp_raw;
+            rec_mpu.data.mpu6050.gyro_x = mpu_raw.gyro_x;
+            rec_mpu.data.mpu6050.gyro_y = mpu_raw.gyro_y;
+            rec_mpu.data.mpu6050.gyro_z = mpu_raw.gyro_z;
+            prg_log_write_blob(raw_log_handle, &rec_mpu, sizeof(rec_mpu));
+
             prg_mpu6050_data_t mpu_data;
             prg_mpu6050_convert(&mpu_raw, &mpu_data);
 
@@ -204,6 +263,15 @@ int main(void)
                 sleep_ms(1000);
                 continue;
             }
+
+            prg_raw_record_t rec_adxl;
+            rec_adxl.t_ms = to_ms_since_boot(get_absolute_time());
+            rec_adxl.sensor_id = PRG_SENSOR_ADXL375;
+            rec_adxl.data.adxl375.x = adxl_raw.x;
+            rec_adxl.data.adxl375.y = adxl_raw.y;
+            rec_adxl.data.adxl375.z = adxl_raw.z;
+            prg_log_write_blob(raw_log_handle, &rec_adxl, sizeof(rec_adxl));
+
             prg_adxl375_data_t adxl_data;
             prg_adxl375_convert(&adxl_raw, &adxl_data);
 

@@ -102,3 +102,20 @@ void prg_log_close(void *handle)
     f_close(file);
     free(file);
 }
+
+bool prg_log_write_blob(void *handle, const void *data, size_t len)
+{
+    FIL *file = (FIL *)handle;
+    if (file == NULL) {
+        return false;
+    }
+
+    UINT written;
+    FRESULT fr = f_write(file, data, len, &written);
+
+    if (fr != FR_OK || written != len) {
+        return false;
+    }
+
+    return true;
+}

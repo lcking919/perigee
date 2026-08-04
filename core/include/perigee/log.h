@@ -19,5 +19,6 @@ bool prg_log_read(void *handle, prg_log_record_t *rec);
 void prg_log_close(void *handle);
 bool prg_log_next_path(char *buf, size_t buf_len);
 bool prg_log_open_read(void **handle, const char *path);
+bool prg_log_write_blob(void *handle, const void *data, size_t len);
 
 #endif
