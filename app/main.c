@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 #include "pico/stdlib.h"
 #include "pico/time.h"
 #include "hardware/i2c.h"
@@ -11,7 +12,7 @@
 #include "perigee/adxl375.h"
 #include "perigee/log.h"
 #include "perigee/raw_log.h"
-#include <math.h>
+#include "perigee/state.h"
 
 #define I2C_SDA_PIN 4
 #define I2C_SCL_PIN 5
@@ -144,6 +145,9 @@ int main(void)
     double ground_pressure_pa = 0.0;
     bool have_ground_pressure = false;
 
+    prg_flight_t flight;
+    bool flight_ready = false;
+
     printf("Press the arm button to start/stop logging (GP%d)...\n", ARM_BUTTON_PIN);
 
     bool logging = false;
@@ -212,6 +216,8 @@ int main(void)
                     if (prg_log_next_path(current_log_path, sizeof(current_log_path)) &&
                         prg_log_open(&log_handle, current_log_path)) {
                         have_log = true;
+                        flight_ready = true;
+                        strncpy(current_log_path, "0:auto-named", sizeof(current_log_path));
 
                         char raw_path[64];
                         strcpy(raw_path, current_log_path);
@@ -236,6 +242,7 @@ int main(void)
                         prg_log_close(log_handle);
                         prg_log_close(raw_log_handle);
                         have_log = false;
+                        flight_ready = false;
                     }
                     printf("STOPPED - logging paused, file closed\n");
                 }
@@ -314,17 +321,15 @@ int main(void)
                    mpu_data.gyro_x_dps, mpu_data.gyro_y_dps, mpu_data.gyro_z_dps,
                    adxl_data.x_g, adxl_data.y_g, adxl_data.z_g);
 
-            if (have_log) {
-                prg_log_record_t rec;
-                rec.t_ms       = to_ms_since_boot(get_absolute_time());
-                rec.alt_m      = (float)press_pa;
-                rec.accel_g    = (float)mpu_data.accel_z_g;
-                rec.baro_valid = 1;
-                rec.imu_valid  = 1;
-                rec.state      = 0;
-                if (!prg_log_write(log_handle, &rec)) {
-                    printf("LOG WRITE FAILED\n");
-                }
+            if (flight_ready) {
+                prg_sample_t sample;
+                sample.t_ms       = to_ms_since_boot(get_absolute_time());
+                sample.alt_m      = (float)altitude_m;
+                sample.accel_g    = (float)adxl_data.z_g;
+                sample.baro_valid = have_ground_pressure;
+                sample.imu_valid  = true;
+
+                prg_flight_update(&flight, &sample);
             }
         }
 

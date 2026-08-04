@@ -13,6 +13,11 @@ add_subdirectory(lib/fatfs-sd/FatFs_SPI)
 add_executable(perigee
     app/main.c
     core/src/apogee.c
+    core/src/vapogee.c
+    core/src/boost.c
+    core/src/burnout.c
+    core/src/landing.c
+    core/src/state.c
     drivers/src/bmp388.c
     drivers/src/mpu6050.c
     drivers/src/adxl375.c
