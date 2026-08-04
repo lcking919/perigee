@@ -61,6 +61,30 @@ end-to-end test.
 *Verification:* T — test_state_machine_full_flight in test_apogee.c,
 full ARMED->LANDED sequence.
 
+## Operations
+
+**PRG-OPS-050** The flight computer shall provide on-demand retrieval of
+recorded telemetry via a physical control, without requiring the flight
+computer to be connected to a ground station or laptop during flight.
+
+*Rationale:* Enables inspection of recorded data immediately after
+recovery, before physical access to a computer is available.
+
+*Verification:* D — long-press of the arm button triggers a full CSV
+dump of the current session's log file over serial, confirmed on
+hardware.
+
+**PRG-OPS-060** The flight computer's data storage shall be physically
+removable, permitting retrieval of recorded flight data using a standard
+computer without custom software.
+
+*Rationale:* Reduces dependency on the flight computer's own firmware
+or a serial connection for data retrieval; a removed storage medium is
+readable by any computer.
+
+*Verification:* D — SD card removed and file contents confirmed
+readable as a standard FAT-formatted volume.
+
 ## Data recording
 
 **PRG-DAT-040** The flight computer shall not overwrite data from a
@@ -70,7 +94,9 @@ previous flight.
 the FC is powered on for a second time.
 
 *Verification:* T — test_flight_init_auto_does_not_overwrite in
-test_apogee.c.
+test_apogee.c (host, LittleFS). Re-confirmed on hardware against the
+FatFS/SD backend: sequential arm/stop cycles produced flight_001.bin
+and flight_002.bin without overwriting.
 
 ## Verification matrix
 
@@ -78,6 +104,9 @@ test_apogee.c.
 |---|---|---|
 | PRG-FSW-030 | T | **Met** — velocity detector using a 10-sample ring buffer, split into two groups of 5 for averaging: 140ms clean, 180ms with ±0.2m sensor noise. Raw two-sample velocity (superseded) measured 60ms clean but 600ms under the same noise — discarded for being noise-sensitive despite looking better on clean data. Distance-based detector (apogee.c) measures 500ms; retained as a baseline. |
 | PRG-FSW-020 | T | **Met** — declared 100ms after sustained 5g onset (the theoretical minimum given the 100ms hold requirement); single-sample 5g spike correctly produces no detection. |
-| PRG-FSW-025 | T | **Met** — burnout declared 100ms after sustained sub-1.5g onset on clean data, and under ±0.1g sensor noise (starting mid-boost, consistent with how it's actually consulted by the state machine). || PRG-FSW-065 | T | **Met** — full synthetic flight correctly reaches BOOST at 1100ms and DESCENT at 5140ms. |
+| PRG-FSW-025 | T | **Met** — burnout declared 100ms after sustained sub-1.5g onset on clean data, and under ±0.1g sensor noise (starting mid-boost, consistent with how it's actually consulted by the state machine). |
+| PRG-FSW-065 | T | **Met** — full synthetic flight correctly reaches BOOST at 1100ms and DESCENT at 5140ms. |
 | PRG-FSW-055 | T | **Met** — landed declared at the theoretical minimum (10000ms after ground phase begins) under simultaneous ±0.3m altitude noise and ±0.1g acceleration noise. |
-| PRG-DAT-040 | T | **Met** — test_flight_init_auto_does_not_overwrite confirms a second flight lands on flight_002.bin and flight_001.bin's content remains intact and readable. |
+| PRG-OPS-050 | D | **Met** — long-press dump confirmed on hardware, current session's file read back correctly as CSV. |
+| PRG-OPS-060 | D | **Met** — SD card confirmed readable as a standard FAT volume after removal. |
+| PRG-DAT-040 | T | **Met** — test_flight_init_auto_does_not_overwrite confirms a second flight lands on flight_002.bin and flight_001.bin's content remains intact and readable, on both LittleFS (host) and FatFS/SD (hardware). |
