@@ -37,6 +37,19 @@ static double compute_altitude_m(double current_pressure_pa, double reference_pr
     return 44330.0 * (1.0 - pow(current_pressure_pa / reference_pressure_pa, 0.1903));
 }
 
+static const char *flight_state_name(prg_flight_state_t s)
+{
+    switch (s) {
+    case PRG_STATE_IDLE:    return "IDLE";
+    case PRG_STATE_ARMED:   return "ARMED";
+    case PRG_STATE_BOOST:   return "BOOST";
+    case PRG_STATE_COAST:   return "COAST";
+    case PRG_STATE_DESCENT: return "DESCENT";
+    case PRG_STATE_LANDED:  return "LANDED";
+    default:                return "UNKNOWN";
+    }
+}
+
 int main(void)
 {
     stdio_init_all();
@@ -138,7 +151,6 @@ int main(void)
     }
     printf("PASS: ADXL375 enabled\n");
 
-    void *log_handle = NULL;
     bool have_log = false;
     char current_log_path[64] = "";
     void *raw_log_handle = NULL;
@@ -214,10 +226,10 @@ int main(void)
                     }
 
                     if (prg_log_next_path(current_log_path, sizeof(current_log_path)) &&
-                        prg_log_open(&log_handle, current_log_path)) {
+                        prg_flight_init(&flight, current_log_path)) {
                         have_log = true;
+                        flight.state = PRG_STATE_ARMED;
                         flight_ready = true;
-                        strncpy(current_log_path, "0:auto-named", sizeof(current_log_path));
 
                         char raw_path[64];
                         strcpy(raw_path, current_log_path);
@@ -239,7 +251,7 @@ int main(void)
                     }
                 } else {
                     if (have_log) {
-                        prg_log_close(log_handle);
+                        prg_log_close(flight.log_handle);
                         prg_log_close(raw_log_handle);
                         have_log = false;
                         flight_ready = false;
@@ -330,6 +342,7 @@ int main(void)
                 sample.imu_valid  = true;
 
                 prg_flight_update(&flight, &sample);
+                printf("FLIGHT STATE: %s\n", flight_state_name(flight.state));
             }
         }
 

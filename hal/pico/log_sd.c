@@ -33,6 +33,7 @@ bool prg_log_open(void **handle, const char *path)
 
     FRESULT fr = f_open(file, path, FA_WRITE | FA_CREATE_ALWAYS);
     if (fr != FR_OK) {
+        printf("prg_log_open: f_open(%s) failed, FRESULT=%d\n", path, fr);
         free(file);
         return false;
     }
